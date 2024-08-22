@@ -1,0 +1,171 @@
+{% extends "layouts/default.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="blog-post blog-single blog-post-style-2 sidebar">
+	<div class="dlab-post-info">
+		<div class="dlab-post-meta text-center">
+			<ul>
+				<li class="post-tag"><a href="javascript:void(0);">{{post.category}}</a></li>
+				<li class="post-date">
+					{{post.post_date}}
+				</li>
+			</ul>
+		</div>
+		<div class="dlab-post-title text-center">
+			<h2 class="post-title">{{post.title}}</h2>
+		</div>
+		<div class="dlab-post-text text">
+			<div class="wp-block-image alignwide">
+				<figure class="aligncenter">
+					<img src="{% static post.image_path %}" alt="">
+				</figure>
+			</div>
+			<p>{{post.content}}</p>
+			<div class="row post-footer m-lr0">
+				<div class="col-lg-4 p-lr0 m-b30">												 
+					<span class="m-r5">by</span> <a href="javascript:void(0);" class="text-uppercase">Carey Ferguson</a> 
+				</div>
+				<div class="col-lg-4 p-lr0 m-b30 text-center">
+					<ul class="add-info">
+						<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
+						<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-4 p-lr0 m-b30">
+					<div class="text-right">
+						<a href="javascript:void(0);" class="text-uppercase">Write A Comment</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="min-container">
+	<div class="row m-b60">
+		<div class="col-lg-3">
+			<div class="sticky-top">
+				<h6 class="title-style1 text-uppercase">About Author</h6>
+			</div>
+		</div>
+		<div class="col-lg-9">
+			<div class="author-box blog-user bg-dark">
+				<div class="author-profile-info">
+					<div class="author-profile-pic">
+						<img src="{% static "images/testimonials/pic1.jpg" %}" alt="">
+					</div>
+					<div class="author-profile-content">
+						<h6>Carey Ferguson</h6>
+						<ul class="list-inline m-b0">
+							<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-facebook"></i></a></li>
+						</ul>
+						<p class="m-b0">Aliquam viverra, ligula at mattis pharetra, risus nibh dignissim leo in luctus odio nulla in nunc. Fusce a purus faucibus suscipit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row m-b30">
+		<div class="col-lg-3">
+			<div class="sticky-top">
+				<h6 class="title-style1 text-uppercase">Top Posts</h6>
+			</div>
+		</div>
+		<div class="col-lg-9">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="category-box overlay m-b30">
+						<div class="category-media">
+							<img src="{% static "images/category/pic1.jpg" %}" alt="">
+						</div>
+						<div class="category-info bg-dark p-a20 text-center">
+							<h6 class="title m-b0"><a href="post-video.html">Crafts for Kids</a></h6>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="category-box overlay m-b30">
+						<div class="category-media">
+							<img src="{% static "images/category/pic2.jpg" %}" alt="">
+						</div>
+						<div class="category-info bg-dark p-a20 text-center">
+							<h6 class="title m-b0"><a href="post-video.html">February Things</a></h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+						
+	<div class="clear m-b30" id="comment-list">
+		<div class="comments-area" id="comments">
+			{% if comments %}
+				<div class="row m-b30">
+					<div class="col-lg-3">
+						<div class="sticky-top">
+							<h6 class="title-style1 text-uppercase">Reviews</h6>
+						</div>
+					</div>
+					<div class="col-lg-9">
+						<!-- comment list END -->
+						<ol class="comment-list">
+							{% for comment in comments %}
+								<li class="comment">
+									<div class="comment-body">
+										<div class="comment-content">
+											<p>{{ comment.content }}</p>
+										</div>
+										<div class="comment-author vcard"> 
+											<img class="avatar photo" src="{% static "images/testimonials/pic1.jpg" %}" alt=""> 
+											<cite class="fn">{{ comment.author.name }}</cite> <span class="says">says:</span> 
+										</div>
+										<div class="comment-meta"> 
+											<a href="javascript:void(0);">{{ comment.comment_date }}</a>
+										</div>
+									</div>
+								</li>
+							{% endfor %}
+						</ol>
+						<!-- comment list END -->
+					</div>
+				</div>
+			{% endif %}
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="sticky-top">
+						<h6 class="title-style1 text-uppercase">Leave a Reply</h6>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<!-- Form -->
+					<div class="comment-respond" id="respond">
+						<h3 class="comment-reply-title" id="reply-title"><small> <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a> </small> </h3>
+						<form class="comment-form" id="commentform" method="post">
+							<p class="comment-form-author">
+								<label for="author">Name <span class="required">*</span></label>
+								<input type="text" value="" placeholder="Author" id="author">
+							</p>
+							<p class="comment-form-email">
+								<label for="email">Email <span class="required">*</span></label>
+								<input type="text" value="" placeholder="Email" id="email">
+							</p>
+							<p class="comment-form-comment">
+								<label for="comment">Comment</label>
+								<textarea rows="8" placeholder="Add a Comment" id="comment"></textarea>
+							</p>
+							<p class="form-submit">
+								<input type="submit" value="Post Comment" class="submit" id="submit">
+							</p>
+						</form>
+					</div>
+					<!-- Form END -->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+{% endblock %}

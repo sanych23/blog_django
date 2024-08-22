@@ -1,0 +1,118 @@
+{% load static %}
+
+<div class="col-lg-4 col-md-5 col-sm-12 col-12">
+    <div class="side-bar p-l20 m-b30 sticky-top">
+        <div class="widget widget-map">
+            <h6 class="widget-title">Current Location</h6>
+            <div class="map-bx text-center">
+                <img src="{% static "images/map.png" %}" alt="">
+                <p class="map-location text-primary">Located at:<span> Miami</span></p>
+            </div>	
+        </div>
+        <div class="widget widget-about">
+            <img class="img-cover" src="{% static "images/about/img1.jpg" %}" alt="">
+            <div class="about-info text-center bg-dark">
+                <h5>Meet Lida...</h5>
+                <p class="m-b0">Sed bibendum massa id luctus cras et lorem feugiat.</p>
+            </div>
+        </div>
+        <div class="widget recent-posts-entry">
+            <h5 class="widget-title">Popular Posts</h5>
+            <div class="widget-post-bx">
+                <div class="widget-post clearfix">
+                    <div class="dlab-post-media">
+                        <img src="{% static "images/blog/recent-blog/pic1.jpg" %}" alt="" width="200" height="143">
+                    </div>
+                    <div class="dlab-post-info">
+                        <div class="dlab-post-header">
+                            <h6 class="post-title"><a href="post-standart.html">Staple Fashion Buys</a></h6>
+                            <div class="post-date">
+                                23 <span>02 </span> 2020
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-post clearfix">
+                    <div class="dlab-post-media">
+                        <img src="{% static "images/blog/recent-blog/pic2.jpg" %}" alt="" width="200" height="143">
+                    </div>
+                    <div class="dlab-post-info">
+                        <div class="dlab-post-header">
+                            <h6 class="post-title"><a href="post-left-sidebar.html">Swimsuit Season</a></h6>
+                            <div class="post-date">
+                                23 <span>02 </span> 2020
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-post clearfix">
+                    <div class="dlab-post-media">
+                        <img src="{% static "images/blog/recent-blog/pic3.jpg" %}" alt="" width="200" height="143">
+                    </div>
+                    <div class="dlab-post-info">
+                        <div class="dlab-post-header">
+                            <h6 class="post-title"><a href="post-full-width.html">Summer Shoe Guide</a></h6>
+                            <div class="post-date">
+                                23 <span>02 </span> 2020
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-post clearfix">
+                    <div class="dlab-post-media">
+                        <img src="{% static "images/blog/recent-blog/pic4.jpg" %}" alt="" width="200" height="143">
+                    </div>
+                    <div class="dlab-post-info">
+                        <div class="dlab-post-header">
+                            <h6 class="post-title"><a href="post-slide-show.html">Nike With My Mini</a></h6>
+                            <div class="post-date">
+                                23 <span>02 </span> 2020
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget widget-instagram">
+            <h5 class="widget-title">Instagram</h5>
+            <ul class="instagram-bx clearfix">
+                <li class="instagram-icon"><a href="javascript:void(0);" class="fa fa-instagram"></a></li>
+                <li><a href="javascript:void(0);"><img class="img-cover" src="{% static "images/instagram-post/pic1.jpg" %}" alt=""></a></li>
+                <li><a href="javascript:void(0);"><img class="img-cover" src="{% static "images/instagram-post/pic2.jpg" %}" alt=""></a></li>
+                <li><a href="javascript:void(0);"><img class="img-cover" src="{% static "images/instagram-post/pic3.jpg" %}" alt=""></a></li>
+                <li><a href="javascript:void(0);"><img class="img-cover" src="{% static "images/instagram-post/pic4.jpg" %}" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="widget widget-newsletter">
+            <div class="news-box text-center">
+                <form class="dzSubscribe" action="script/mailchamp.php" method="post">
+                    <h6>Want More?</h6>
+                    <p>Sed bibendum massa id luctus cras et lorem feugiat.</p>
+                    <div class="input-group">
+                        <input name="dzEmail" required="required" type="email" class="form-control" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button name="submit" value="Submit" type="submit" class="btn">
+                                <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="dzSubscribeMsg"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="widget widget_categories">
+            <h6 class="widget-title">Category</h6>
+            <ul>
+                <li><a href="javascript:void(0);">Beauty </a> 15 </li>
+                <li><a href="javascript:void(0);">Travel </a> 17 </li>
+                <li><a href="javascript:void(0);">Lifestyle </a> 18 </li>
+                <li><a href="javascript:void(0);">Fashion </a> 9 </li>
+            </ul>
+        </div>
+        <div class="widget widget_mailbox">
+            <div class="mailbox" style="background-image: url(images/background/img3.jpg); background-size: cover; background-position: center;">
+                <a href="javascript:void(0);" class="btn radius-no btn-block primary">bucklinblog.com</a>
+            </div>
+        </div>
+    </div>
+</div>

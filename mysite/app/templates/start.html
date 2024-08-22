@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    {{ x }}
+
+    {{ y }}
+
+
+    <ul>
+        {% for item in news %}
+            <li>
+                <a href="news/{{item.id}}">
+                    <h2>{{ item.title }}</h2>
+                    <p>{{ item.content }}</p>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for item in news_json %}
+            <li>
+                <h2>{{ item }}</h2>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- на страницу списка новостей добавить форму поиска 
+        и по нажатию на кнопку оставлять только те новости в которых есть вхождения 
+    -->
+
+</body>
+</html>

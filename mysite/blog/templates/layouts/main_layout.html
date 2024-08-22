@@ -1,0 +1,433 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="description" content="Bucklin : Blog HTML Template" />
+	<meta property="og:title" content="Bucklin : Blog HTML Template" />
+	<meta property="og:description" content="Bucklin : Blog HTML Template" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
+	
+	<!-- PAGE TITLE HERE -->
+	<title>Bucklin : Blog HTML Template</title>
+	
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/plugins.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/templete.css' %}">
+	<link class="skin" rel="stylesheet" type="text/css" href="{% static 'css/skin/skin-1.css' %}">
+	
+</head>
+<body id="bg">
+<div class="page-wraper">
+<div id="loading-area"></div>
+	
+    <div class="page-content bg-white">
+        
+		{% block header %} {% endblock %}
+		
+		<!-- header END -->
+		<!-- Trending Posts -->
+		 
+		<div class="section-full bg-white content-inner-1">
+			<div class="container-fluid">
+				<div class="section-head text-center">
+					<h4 class="title text-uppercase">Trending Posts</h4>
+					<div class="title-separate"></div>
+				</div>
+				<div class="trending-post-bx owl-carousel owl-btn-center-lr">
+					<div class="item">
+						<div class="trending-post text-center">
+							<div class="trending-media">
+								<img src="{% static 'images/trending/pic1.jpg' %}" alt=""/>
+							</div>
+							<div class="trending-info">
+								<h3 class="trending-title"><a href="post-standart.html">Love in Las Vegas</a></h3>
+								<div class="post-date">
+									27 <span>02 </span> 2020
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="trending-post text-center">
+							<div class="trending-media">
+								<img src="{% static 'images/trending/pic2.jpg' %}" alt=""/>
+							</div>
+							<div class="trending-info">
+								<h3 class="trending-title"><a href="post-left-sidebar.html">Hudson Yards</a></h3>
+								<div class="post-date">
+									26 <span>02 </span> 2020
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="trending-post text-center">
+							<div class="trending-media">
+								<img src="{% static 'images/trending/pic3.jpg' %}" alt=""/>
+							</div>
+							<div class="trending-info">
+								<h3 class="trending-title"><a href="post-full-width.html">February Things</a></h3>
+								<div class="post-date">
+									25 <span>02 </span> 2020
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="trending-post text-center">
+							<div class="trending-media">
+								<img src="{% static 'images/trending/pic4.jpg' %}" alt=""/>
+							</div>
+							<div class="trending-info">
+								<h3 class="trending-title"><a href="post-slide-show.html">Beauty Routine</a></h3>
+								<div class="post-date">
+									24 <span>02 </span> 2020
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="trending-post text-center">
+							<div class="trending-media">
+								<img src="{% static 'images/trending/pic5.jpg' %}" alt=""/>
+							</div>
+							<div class="trending-info">
+								<h3 class="trending-title"><a href="post-header-image.html">Hair for Spring</a></h3>
+								<div class="post-date">
+									23 <span>02 </span> 2020
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Trending Posts End -->
+		<!-- Blog Post -->
+		<div class="section-full bg-white content-inner-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-7 col-sm-12 col-12">
+						<div class="row">
+							<div class="col-lg-12 m-b30">
+								<div class="blog-card blog-grid blog-full bg-dark">
+									<div class="blog-card-media">
+										<img src="{% static 'images/blog/blog-lg/pic1.jpg' %}" alt=""/>
+									</div>
+									<div class="blog-card-info text-center">
+										<h2 class="title"><a href="post-gallery.html">Cozy Valentines Ideas</a></h2>
+										<div class="post-date">
+											23 <span>02 </span> 2020
+										</div>
+										<ul class="add-info">
+											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
+											<li><a href="post-gallery.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 m-b30">
+								<div class="blog-card blog-grid bg-dark">
+									<div class="blog-card-media">
+										<img src="{% static 'images/blog/blog-md/pic1.jpg' %}" alt=""/>
+									</div>
+									<div class="blog-card-info text-center">
+										<h2 class="title"><a href="post-audio.html">Crafts for Kids</a></h2>
+										<div class="post-date">
+											23 <span>02 </span> 2020
+										</div>
+										<ul class="add-info">
+											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
+											<li><a href="post-audio.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 m-b30">
+								<div class="blog-card blog-grid bg-dark">
+									<div class="blog-card-media">
+										<img src="{% static 'images/blog/blog-md/pic2.jpg' %}" alt=""/>
+									</div>
+									<div class="blog-card-info text-center">
+										<h2 class="title"><a href="post-video.html">Packing Orlando</a></h2>
+										<div class="post-date">
+											23 <span>02 </span> 2020
+										</div>
+										<ul class="add-info">
+											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
+											<li><a href="post-video.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 m-b30">
+								<div class="blog-card blog-grid bg-dark">
+									<div class="blog-card-media">
+										<img src="{% static 'images/blog/blog-md/pic3.jpg' %}" alt=""/>
+									</div>
+									<div class="blog-card-info text-center">
+										<h2 class="title"><a href="post-side-image.html">Disney World</a></h2>
+										<div class="post-date">
+											23 <span>02 </span> 2020
+										</div>
+										<ul class="add-info">
+											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
+											<li><a href="post-side-image.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 m-b30">
+								<div class="blog-card blog-grid bg-dark">
+									<div class="blog-card-media">
+										<img src="{% static 'images/blog/blog-md/pic4.jpg' %}" alt=""/>
+									</div>
+									<div class="blog-card-info text-center">
+										<h2 class="title"><a href="post-without-image.html">March Things</a></h2>
+										<div class="post-date">
+											23 <span>02 </span> 2020
+										</div>
+										<ul class="add-info">
+											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
+											<li><a href="post-without-image.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% block sidebar %} {% endblock %}
+				</div>
+			</div>
+		</div>
+		<!-- Blog Post End -->
+		<!-- Blog Slider -->
+		<div class="section-full blog-full-bx" style="background-image: url(images/background/bg1.jpg); background-size: cover;">
+			<div class="container">
+				<div class="blog-slider-full bg-dark owl-carousel owl-btn-center-lr">
+					<div class="item">
+						<div class="blog-slider-box">
+							<div class="post-date">
+								23 <span>02 </span> 2020
+							</div>
+							<div class="post-thumb">
+								<img src="{% static 'images/blog-slider/pic1.jpg' %}" alt="">
+							</div>
+							<h2 class="title"><a href="post-standart.html">Absolutely All-In Romance</a></h2>
+						</div>
+					</div>
+					<div class="item">
+						<div class="blog-slider-box">
+							<div class="post-date">
+								23 <span>02 </span> 2020
+							</div>
+							<div class="post-thumb">
+								<img src="{% static 'images/blog-slider/pic2.jpg' %}" alt="">
+							</div>
+							<h2 class="title"><a href="post-left-sidebar.html">Absolutely All-In Romance</a></h2>
+						</div>
+					</div>
+					<div class="item">
+						<div class="blog-slider-box">
+							<div class="post-date">
+								23 <span>02 </span> 2020
+							</div>
+							<div class="post-thumb">
+								<img src="{% static 'images/blog-slider/pic3.jpg' %}" alt="">
+							</div>
+							<h2 class="title"><a href="post-full-width.html">Absolutely All-In Romance</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Blog Slider End -->
+		<!-- Blog Post -->
+		<div class="section-full bg-white content-inner-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-7 col-sm-12 col-12">
+						<div class="row loadmore-content">
+							<div class="col-lg-6 m-b30">
+								<div class="blog-card blog-grid bg-dark">
+									<div class="blog-card-media">
+										<img src="{% static 'images/blog/blog-md/pic5.jpg' %}" alt=""/>
+									</div>
+									<div class="blog-card-info text-center">
+										<h2 class="title"><a href="post-slide-show.html">Glacier Tour</a></h2>
+										<div class="post-date">
+											23 <span>02 </span> 2020
+										</div>
+										<ul class="add-info">
+											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
+											<li><a href="post-slide-show.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 m-b30">
+								<div class="blog-card blog-grid bg-dark">
+									<div class="blog-card-media">
+										<img src="{% static 'images/blog/blog-md/pic6.jpg' %}" alt=""/>
+									</div>
+									<div class="blog-card-info text-center">
+										<h2 class="title"><a href="post-header-image.html">Effortless Look</a></h2>
+										<div class="post-date">
+											23 <span>02 </span> 2020
+										</div>
+										<ul class="add-info">
+											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
+											<li><a href="post-header-image.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 m-b30">
+								<div class="blog-card blog-grid bg-dark">
+									<div class="blog-card-media">
+										<img src="{% static 'images/blog/blog-md/pic7.jpg' %}" alt=""/>
+									</div>
+									<div class="blog-card-info text-center">
+										<h2 class="title"><a href="post-gallery.html">Sunsets Beach</a></h2>
+										<div class="post-date">
+											23 <span>02 </span> 2020
+										</div>
+										<ul class="add-info">
+											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
+											<li><a href="post-gallery.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 m-b30">
+								<div class="blog-card blog-grid bg-dark">
+									<div class="blog-card-media">
+										<img src="{% static 'images/blog/blog-md/pic8.jpg' %}" alt=""/>
+									</div>
+									<div class="blog-card-info text-center">
+										<h2 class="title"><a href="post-audio.html">Spring Stripes</a></h2>
+										<div class="post-date">
+											23 <span>02 </span> 2020
+										</div>
+										<ul class="add-info">
+											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
+											<li><a href="post-audio.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row clearfix">
+							<div class="col-lg-12 m-t10">
+								<div class="text-center m-b30">
+									<a href="javascript:;" class="btn outline outline-1 radius-xl loadmore-btn dz-load-more fa fa-angle-double-down" rel="http://bucklin.dexignzone.com/xhtml/ajax/index.html"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-5 col-sm-12 col-12">
+						<div class="side-bar p-l20 m-b30 sticky-top">
+							<div class="widget widget-newsletter">
+								<div class="news-box text-center">
+									<form class="dzSubscribe" action="script/mailchamp.php" method="post">
+										<h6>Want More?</h6>
+										<p>Sed bibendum massa id luctus cras et lorem feugiat.</p>
+										<div class="input-group">
+											<input name="dzEmail" required="required" type="email" class="form-control" placeholder="Your Email">
+											<div class="input-group-append">
+												<button name="submit" value="Submit" type="submit" class="btn">
+													<i class="fa fa-paper-plane"></i>
+												</button>
+											</div>
+											<div class="dzSubscribeMsg"></div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="widget widget_categories">
+								<h6 class="widget-title">Category</h6>
+								<ul>
+									<li><a href="javascript:void(0);">Beauty </a> 15 </li>
+									<li><a href="javascript:void(0);">Travel </a> 17 </li>
+									<li><a href="javascript:void(0);">Lifestyle </a> 18 </li>
+									<li><a href="javascript:void(0);">Fashion </a> 9 </li>
+								</ul>
+							</div>
+							<div class="widget widget_mailbox">
+								<div class="mailbox" style="background-image: url(images/background/img3.jpg); background-size: cover; background-position: center;">
+									<a href="javascript:void(0);" class="btn radius-no btn-block primary">bucklinblog.com</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- About Us End -->
+		<!-- Blog Card Carousel -->
+		{% block carousel %}
+		{% endblock %}
+		<!-- Blog Card Carousel End -->
+		<!-- Newslatter -->
+		{% block newsletterbox %}
+		{% endblock %}
+		<!-- Newslatter End -->
+		<!-- Social Link Box -->
+		{% block social %}
+		{% endblock %}
+		<!-- Social Link Box End -->
+    </div>
+    <!-- Content END-->
+	<!-- Footer -->
+    {% block footer %}
+	{% endblock %}
+    <!-- Footer END-->
+    <button class="scroltop fa fa-chevron-up" ></button>
+</div>
+<!-- JAVASCRIPT FILES ========================================= -->
+<script src="{% static 'js/jquery.min.js' %}"></script><!-- JQUERY.MIN JS -->
+<script src="{% static 'plugins/bootstrap/js/popper.min.js' %}"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="{% static 'plugins/bootstrap-select/bootstrap-select.min.js' %}"></script><!-- FORM JS -->
+<script src="{% static 'plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js' %}"></script><!-- FORM JS -->
+<script src="{% static 'plugins/magnific-popup/magnific-popup.js' %}"></script><!-- MAGNIFIC POPUP JS -->
+<script src="{% static 'plugins/counter/waypoints-min.js' %}"></script><!-- WAYPOINTS JS -->
+<script src="{% static 'plugins/counter/counterup.min.js' %}"></script><!-- COUNTERUP JS -->
+<script src="{% static 'plugins/imagesloaded/imagesloaded.js' %}"></script><!-- IMAGESLOADED -->
+<script src="{% static 'plugins/masonry/masonry-3.1.4.js' %}"></script><!-- MASONRY -->
+<script src="{% static 'plugins/masonry/masonry.filter.js' %}"></script><!-- MASONRY -->
+<script src="{% static 'plugins/owl-carousel/owl.carousel.js' %}"></script><!-- OWL SLIDER -->
+<script src="{% static 'plugins/scroll/scrollbar.min.js' %}"></script><!-- Scroll Bar -->
+<script src="{% static 'js/custom.js' %}"></script><!-- CUSTOM FUCTIONS  -->
+<script src="{% static 'js/dz.carousel.js' %}"></script><!-- SORTCODE FUCTIONS -->
+<script src="{% static 'js/dz.ajax.js' %}"></script><!-- CONTACT JS  -->
+</body>
+</html>

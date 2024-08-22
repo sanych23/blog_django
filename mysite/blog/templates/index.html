@@ -1,0 +1,314 @@
+{% extends "layouts/main_layout.html" %}
+{% load static %}
+
+{% block header %}
+<div class="banner-top-info">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-8">
+				<div class="location">
+					<p><i class="fa fa-map-marker"></i>Miami, Florida, USA</p>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-4 align-self-center">
+				<ul class="social-link list-inline m-b0">
+					<li><a href="javascript:void(0);" class="fa fa-instagram"></a></li>
+					<li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="banner-slide owl-carousel owl-dots">
+	<div class="item">
+		<div class="slider-bx">
+			<div class="dlab-post-media overlay-black-light">
+				<img src="{% static 'images/main-slider/slide3.jpg' %}" alt="">
+			</div>
+			<div class="slider-info text-white">
+				<h6>Welcome to</h6>
+				<h2>My Blog</h2>
+			</div>
+		</div>
+	</div>			
+	<div class="item">
+		<div class="slider-bx">
+			<div class="dlab-post-media overlay-black-light">
+				<img src="{% static 'images/main-slider/slide4.jpg' %}" alt="">
+			</div>
+			<div class="slider-info text-white">
+				<h6>Welcome to</h6>
+				<h2>My Blog</h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+<header class="site-header mo-left header-full header header-transparent header-bottom">
+	<!-- Main Header -->
+	<div class="sticky-header main-bar-wraper navbar-expand-lg">
+		<div class="main-bar clearfix ">
+			<div class="container-fluid">
+				<div class="header-content-bx">
+					<!-- website logo -->
+					<div class="logo-header">
+						<a href="/blog/"><img src="{% static 'images/logo.png' %}" alt=""/></a>
+					</div>
+					<!-- Extra Nav -->
+					<div class="extra-nav">
+						<div class="extra-cell">
+							<ul>
+								<li class="search-btn">
+									<a href="javascript:;" class="btn-link menu-icon">
+										<div class="menu-icon-in">
+											<span></span>
+											<span></span>
+											<span></span>
+											<span></span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- Main Nav -->
+					<div class="header-nav navbar-collapse collapse justify-content-center" id="navbarNavDropdown">
+						<ul class="nav navbar-nav">	
+							<li class="active">
+								<a href="javascript:void(0);">Home </a>
+								<ul class="sub-menu">
+									<li><a href="/blog/">Home 01</a></li>
+									{% comment %} <li><a href="index-2.html">Home 02</a></li>
+									<li><a href="index-3.html">Home 03</a></li>
+									<li><a href="index-4.html">Home 04</a></li>
+									<li><a href="index-5.html">Home 05</a></li> {% endcomment %}
+								</ul>	
+							</li>
+							<li>
+								<a href="javascript:void(0);">Featured </a>
+								<ul class="sub-menu">
+									<li><a href="postlist/">Post List</a></li>
+									{% comment %} <li><a href="post-standart.html">Post Standart</a></li>
+									<li><a href="post-left-sidebar.html">Post Left Sidebar</a></li>
+									<li><a href="post-full-width.html">Post Full Width</a></li>
+									<li><a href="post-slide-show.html">Post Slide Show</a></li>
+									<li><a href="post-header-image.html">Post Header Image</a></li>
+									<li><a href="post-gallery.html">Post Gallery</a></li>
+									<li><a href="post-audio.html">Post Audio</a></li>
+									<li><a href="post-video.html">Post Video</a></li>
+									<li><a href="post-side-image.html">Post Side Image</a></li>
+									<li><a href="post-without-image.html">Post Without Image</a></li>
+									<li><a href="post-open-gutenberg.html">Post Open Gutenberg</a></li> {% endcomment %}
+								</ul>
+							</li>
+							<li>
+								<a href="javascript:void(0);">Pages </a>
+								<ul class="sub-menu">
+									<li><a href="about-us.html">About Us</a></li>
+									<li><a href="error-404.html">Error 404</a></li>
+									<li><a href="shop-product.html">Shop Product</a></li>
+									<li><a href="shopping-cart.html">Shopping Cart</a></li>
+									<li><a href="checkout.html">Checkout</a></li>
+									<li><a href="product-details.html">Product Details</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Main Header END -->
+	<!-- Header Left -->
+	<div class="header-nav navbar-collapse collapse full-sidenav content-scroll">
+		<div class="location">
+			<p><i class="fa fa-map-marker"></i>Miami, Florida, USA</p>
+		</div>
+		<ul class="nav navbar-nav">	
+			<li class="active">
+				<a href="javascript:void(0);">Home </a>
+				<ul class="sub-menu">
+					<li><a href="/blog/">Home 01</a></li>
+					{% comment %} <li><a href="index-2.html">Home 02</a></li>
+					<li><a href="index-3.html">Home 03</a></li>
+					<li><a href="index-4.html">Home 04</a></li>
+					<li><a href="index-5.html">Home 05</a></li> {% endcomment %}
+				</ul>	
+			</li>
+			<li>
+				<a href="javascript:void(0);">Featured </a>
+				<ul class="sub-menu">
+					<li><a href="postlist/">Post List</a></li>
+					{% comment %} <li><a href="post-standart.html">Post Standart</a></li>
+					<li><a href="post-left-sidebar.html">Post Left Sidebar</a></li>
+					<li><a href="post-full-width.html">Post Full Width</a></li>
+					<li><a href="post-slide-show.html">Post Slide Show</a></li>
+					<li><a href="post-header-image.html">Post Header Image</a></li>
+					<li><a href="post-gallery.html">Post Gallery</a></li>
+					<li><a href="post-audio.html">Post Audio</a></li>
+					<li><a href="post-video.html">Post Video</a></li>
+					<li><a href="post-side-image.html">Post Side Image</a></li>
+					<li><a href="post-without-image.html">Post Without Image</a></li>
+					<li><a href="post-open-gutenberg.html">Post Open Gutenberg</a></li> {% endcomment %}
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">Pages </a>
+				<ul class="sub-menu">
+					<li><a href="about-us.html">About Us</a></li>
+					<li><a href="error-404.html">Error 404</a></li>
+					<li><a href="shop-product.html">Shop Product</a></li>
+					<li><a href="shopping-cart.html">Shopping Cart</a></li>
+					<li><a href="checkout.html">Checkout</a></li>
+					<li><a href="product-details.html">Product Details</a></li>
+				</ul>
+			</li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<div class="logo-header">
+			<a href="index.html"><img src="{% static 'images/logo.png' %}" alt=""/></a>
+		</div>
+	</div>
+	<div class="menu-close">
+		<i class="la la-close"></i>
+	</div>
+	<!-- Header Left End -->
+</header>
+{% endblock %}
+
+{% block sidebar %}
+	{% include "sidebar.html" %}
+{% endblock %}
+
+{% block carousel %}
+<div class="blog-card-carousel owl-carousel mfp-gallery  owl-none">
+	<div class="item">
+		<a href="images/blog/card/pic1.jpg" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+			<img src="{% static 'images/blog/card/pic1.jpg' %}" alt="">
+		</a>
+	</div>
+	<div class="item">
+		<a href="images/blog/card/pic2.jpg" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+			<img src="{% static 'images/blog/card/pic2.jpg' %}" alt="">
+		</a>
+	</div>
+	<div class="item">
+		<a href="images/blog/card/pic3.jpg" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+			<img src="{% static 'images/blog/card/pic3.jpg' %}" alt="">
+		</a>
+	</div>
+	<div class="item">
+		<a href="images/blog/card/pic4.jpg" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+			<img src="{% static 'images/blog/card/pic4.jpg' %}" alt="">
+		</a>
+	</div>
+	<div class="item">
+		<a href="images/blog/card/pic5.jpg" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+			<img src="{% static 'images/blog/card/pic5.jpg' %}" alt="">
+		</a>
+	</div>
+	<div class="item">
+		<a href="images/blog/card/pic6.jpg" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+			<img src="{% static 'images/blog/card/pic6.jpg' %}" alt="">
+		</a>
+	</div>
+</div>
+{% endblock %}
+
+{% block newsletterbox %}
+<div class="newslatter-bx">
+	<div class="container">
+		<form action="script/mailchamp.php" method="post" class="row m-lr0 align-items-center dezPlaceAni dzSubscribe">
+			<div class="col-xl-6 col-lg-6 col-md-12">
+				<div class="title-bx">
+					<h2 class="m-b0">Join Our Newslatter!</h2>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-12 contact-form-bx">
+				<div class="form-group">
+					<div class="input-group">
+						<label>Your Email Address</label>
+						<input name="dzEmail" required="required" type="email" class="form-control" placeholder="" >
+						<button name="submit" value="Submit" type="submit" class="btn-link">Subscribe</button>
+					</div>
+					<div class="dzSubscribeMsg"></div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
+
+{% block social %}
+<div class="section-full social-link-bx">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-md-4 col-sm-4 col-6">
+				<a href="javascript:void(0);" class="social-link">
+					<i class="fa fa-twitter"></i>
+					<span>twitter</span>
+				</a>
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-4 col-6">
+				<a href="javascript:void(0);" class="social-link">
+					<i class="fa fa-facebook"></i>
+					<span>Facebook</span>
+				</a>
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-4 col-6">
+				<a href="javascript:void(0);" class="social-link">
+					<i class="fa fa-instagram"></i>
+					<span>Instagram</span>
+				</a>
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-4 col-6">
+				<a href="javascript:void(0);" class="social-link">
+					<i class="fa fa-behance"></i>
+					<span>Behance</span>
+				</a>
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-4 col-6">
+				<a href="javascript:void(0);" class="social-link">
+					<i class="fa fa-youtube-play"></i>
+					<span>Youtube</span>
+				</a>
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-4 col-6">
+				<a href="javascript:void(0);" class="social-link">
+					<i class="fa fa-pinterest-p"></i>
+					<span>Pinterest</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+<footer class="site-footer">
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<ul class="footer-link m-b0">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about-us.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>						
+				</div>
+				<div class="col-lg-4">
+					<div class="footer-logo">
+						<a href="index.html"><img src="{% static 'images/logo.png' %}" alt=""/></a>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<p class="copyright">Copyright © 2020 DexignZone.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+{% endblock %}

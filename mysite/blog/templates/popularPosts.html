@@ -1,0 +1,21 @@
+{% load static %}
+<div class="widget recent-posts-entry">
+    <h5 class="widget-title">Popular Posts</h5>
+    <div class="widget-post-bx">
+        {% for post in populars %}
+            <div class="widget-post clearfix">
+                <div class="dlab-post-media">
+                    <img src="{% static post.image_path %}" alt="" width="200" height="143">
+                </div>
+                <div class="dlab-post-info">
+                    <div class="dlab-post-header">
+                        <h6 class="post-title"><a href="/blog/post/{{post.id}}">{{post.title}}</a></h6>
+                        <div class="post-date">
+                            {{post.postDate}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

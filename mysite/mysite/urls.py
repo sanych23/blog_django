@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import MySite
-
+from django.conf.urls.i18n import i18n_patterns
 from app.views import MainView
 from django.urls import include
 
@@ -32,4 +32,6 @@ urlpatterns = [
     path("test-get/", MainView.test_get),
     path("blog/", include("blog.urls")),
     path("custom-error-404/", MySite.action404),
+    path("lang/", MySite.lang),
+    path("i18n/", include("django.conf.urls.i18n")),
 ]

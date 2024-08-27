@@ -31,3 +31,6 @@ class Comment(models.Model):
     author = models.ForeignKey("Author", on_delete=models.DO_NOTHING, null=True)
     comment_date = models.DateField(auto_created=True)
 
+
+class Localization(models.Model):
+    type = models.CharField(max_length=50)

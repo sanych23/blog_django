@@ -7,7 +7,7 @@
 	<div class="dlab-post-info">
 		<div class="dlab-post-meta text-center">
 			<ul>
-				<li class="post-tag"><a href="javascript:void(0);">{{post.category}}</a></li>
+				<li class="post-tag"><a href="javascript:void(0);">{{post.category.title}}</a></li>
 				<li class="post-date">
 					{{post.post_date}}
 				</li>
@@ -29,8 +29,8 @@
 				</div>
 				<div class="col-lg-4 p-lr0 m-b30 text-center">
 					<ul class="add-info">
-						<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
-						<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
+						<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i> views:<span>{{ post.view_count }}</span></a></li>
+						<li><a href="javascript:void(0);"><i class="la la-comment"></i> comments:<span>{{ post.countComment }}</span></a></li>
 					</ul>
 				</div>
 				<div class="col-lg-4 p-lr0 m-b30">
@@ -102,7 +102,7 @@
 						
 	<div class="clear m-b30" id="comment-list">
 		<div class="comments-area" id="comments">
-			{% if comments %}
+			<!-- {% if comments %} -->
 				<div class="row m-b30">
 					<div class="col-lg-3">
 						<div class="sticky-top">
@@ -112,7 +112,7 @@
 					<div class="col-lg-9">
 						<!-- comment list END -->
 						<ol class="comment-list">
-							{% for comment in comments %}
+							{% for comment in post.comment_set.all %}
 								<li class="comment">
 									<div class="comment-body">
 										<div class="comment-content">
@@ -133,7 +133,7 @@
 						<!-- comment list END -->
 					</div>
 				</div>
-			{% endif %}
+			<!-- {% endif %} -->
 			<div class="row">
 				<div class="col-lg-3">
 					<div class="sticky-top">

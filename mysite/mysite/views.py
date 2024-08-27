@@ -13,3 +13,7 @@ class MySite(View):
         response = render(request, "error-404.html")
         response.status_code = 404
         return response
+    
+    def lang(request):
+        print(request.GET.get('language'))
+        return request

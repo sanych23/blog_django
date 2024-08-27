@@ -5,6 +5,7 @@ import requests
 from blog.Data import *
 from blog.models import *
 from mysite.views import MySite
+from pprint import pprint
 
 
 class Blog:
@@ -14,6 +15,7 @@ class Blog:
 
 
     def postList(request):
+        pprint(request.headers['Accept-Language'])
         data = {
             "posts": Posts.objects.all(),
             "category": CategoryPost.objects.all(),
@@ -24,7 +26,7 @@ class Blog:
 
     def post(request, id):
         data = {}
-
+        # pprint(request.headers['Accept-Language'])
         try:
             post = Posts.objects.get(id=id)
 

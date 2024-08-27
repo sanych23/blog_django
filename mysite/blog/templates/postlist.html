@@ -22,8 +22,8 @@
 				<p>{{post.content|truncatewords:35}}</p>
 				<ul class="add-info">
 					<li><a href="/blog/post/{{post.id}}" class="btn radius-no primary">Read More</a></li>
-					<li><a href="/blog/post/{{post.id}}"><i class="la la-share-alt-square"></i><span>{{ post.view_count }}</span></a></li>
-					<li><a href="/blog/post/{{post.id}}#scroll_link"><i class="la la-comment"></i><span>{{ post.countComment }}</span></a></li>
+					<li><a href="/blog/post/{{post.id}}"><i class="la la-share-alt-square"></i> views: <span>{{ post.view_count }}</span></a></li>
+					<li><a href="/blog/post/{{post.id}}#scroll_link"><i class="la la-comment"></i> comments: <span>{{ post.countComment }}</span></a></li>
 				</ul>
 			</div>
 		</div>

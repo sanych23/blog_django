@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import requests
 
 # Create your views here.
 from blog.Data import *
 from blog.models import *
+from mysite.views import MySite
 
 
 class Blog:
@@ -22,14 +23,22 @@ class Blog:
 
 
     def post(request, id):
+        data = {}
 
-        post = Posts.objects.get(id=id)
-        post_comments = post.comment_set.all()
+        try:
+            post = Posts.objects.get(id=id)
 
-        data = {
-            'post': post,
-            'comments': post_comments,
-        }
+            if post:
+                post_comments = post.comment_set.all()
+                data["post"] = post
+                data["comments"] = post_comments,
+                
+                post.view_count += 1
+                post.save()
+            else:
+                redirect("error-404/")
+        except:
+            return redirect(MySite.action404)
 
         return render(request, "post.html", context=data)
 

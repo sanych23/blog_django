@@ -15,6 +15,10 @@ class Posts(models.Model):
     image_path = models.CharField(max_length=255)
     category = models.ForeignKey("CategoryPost", on_delete=models.DO_NOTHING, null=True)
     author = models.ForeignKey("Author", on_delete=models.DO_NOTHING, null=True)
+    view_count = models.PositiveIntegerField(default=0)
+
+    def countComment(self):
+        return Comment.objects.filter(post=self).count()
 
 
 class Author(models.Model):

@@ -48,6 +48,7 @@ class PostSeed:
                 "image_path": random.choice(self.image_paths),
                 "category_id": random.choice(categorie_id),
                 "author_id": random.choice(author_id),
+                "view_count": 0,
             }
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()

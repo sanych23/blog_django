@@ -17,6 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from .views import MySite
 
 from app.views import MainView
 from django.urls import include
@@ -27,7 +28,8 @@ urlpatterns = [
     path("news/<int:id>/", MainView.news),
     path("admin/", admin.site.urls),
     path("igor/", MainView.action_igor),
-    path("error-404/", MainView.handler404),
+    # path("error-404/", MainView.handler404),
     path("test-get/", MainView.test_get),
     path("blog/", include("blog.urls")),
+    path("custom-error-404/", MySite.action404),
 ]

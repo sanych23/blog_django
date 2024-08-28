@@ -11,6 +11,7 @@ from pprint import pprint
 class Blog:
 
     def home(request):
+        pprint(f"Your Language is {request.session['_language']} and {request.session['django_language']}")
         return render(request, "index.html")
 
 
@@ -26,7 +27,7 @@ class Blog:
 
     def post(request, id):
         data = {}
-        # pprint(request.headers['Accept-Language'])
+        pprint(request.session)
         try:
             post = Posts.objects.get(id=id)
 

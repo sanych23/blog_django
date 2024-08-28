@@ -48,13 +48,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    'django.middleware.locale.LocaleMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = "mysite.urls"
@@ -116,13 +115,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+LANGUAGE_CODE = "en"
+
 ugettext = lambda s: s
 LANGUAGES = [
-    ('en', ugettext('English')),
-    ('ru', ugettext('Russian')),
+    ('en', ugettext(u'English')),
+    ('ru', ugettext(u'Russian')),
 ]
-
-LANGUAGE_CODE = "en-us"
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),

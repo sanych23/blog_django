@@ -33,7 +33,9 @@ class PostSeed:
 
     def __init__(self) -> None:
 
-        fake = Faker()
+        fake_ru = Faker('ru')
+        fake_en = Faker('en')
+
         seeder = Seed.seeder()
 
         categorie_id = CategoryPost.objects.values_list('id', flat=True)
@@ -42,9 +44,12 @@ class PostSeed:
         for id in range(1, self.value_count + 1):
             seed = {
                 "id": id,
-                "title": fake.text(max_nb_chars=30), # random.choice(self.titles)
-                "content": fake.text(max_nb_chars=1000),
-                "post_date": fake.date_this_year(),
+                "title": fake_ru.text(max_nb_chars=30), # random.choice(self.titles)
+                "title_en": fake_en.text(max_nb_chars=30), # random.choice(self.titles)
+                "content_en": fake_en.text(max_nb_chars=1000),
+                "title_ru": fake_ru.text(max_nb_chars=30), # random.choice(self.titles)
+                "content_ru": fake_ru.text(max_nb_chars=1000),
+                "post_date": fake_en.date_this_year(),
                 "image_path": random.choice(self.image_paths),
                 "category_id": random.choice(categorie_id),
                 "author_id": random.choice(author_id),

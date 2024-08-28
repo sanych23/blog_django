@@ -39,15 +39,3 @@ class MySite(View):
         else:
             return HttpResponseRedirect('/custom-error-404/')
         return response
-
-# sample
-# def select_lang(request, code):
-#     go_next = request.META.get('HTTP_REFERER', '/')
-#     response = HttpResponseRedirect(go_next)
-#     if code and translation.check_for_language(code):
-#         if hasattr(request, 'session'):
-#             request.session['django_language'] = code
-#         else:
-#             response.set_cookie(settings.LANGUAGE_COOKIE_NAME, code)
-#         translation.activate(code)
-#     return response

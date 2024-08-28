@@ -15,7 +15,9 @@ class CommentSeed:
 
     def __init__(self) -> None:
 
-        fake = Faker()
+        fake_en = Faker('en')
+        fake_ru = Faker('ru')
+
         seeder = Seed.seeder()
 
         author_id = Author.objects.values_list('id', flat=True)
@@ -24,8 +26,10 @@ class CommentSeed:
         for id in range(1, self.value_count + 1):
             seed = {
                 "id": id,
-                "content": fake.text(max_nb_chars=150),
-                "comment_date": fake.date_time(),
+                "content": fake_ru.text(max_nb_chars=150),
+                "content_ru": fake_ru.text(max_nb_chars=150),
+                "content_en": fake_en.text(max_nb_chars=150),
+                "comment_date": fake_ru.date_time(),
                 "author_id": random.choice(author_id),
                 "post_id": random.choice(post_id),
             }

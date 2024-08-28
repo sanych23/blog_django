@@ -8,23 +8,31 @@ class CategorySeed:
     data = [
         {
             "id": 1,
-            "title": "Красота",
-            "description": "Описание категории Красота",
+            "title_ru": "Красота",
+            "title_en": "Beauty",
+            "description_ru": "Описание категории Красота",
+            "description_en": "Description category Beauty",
         },
         {
             "id": 2,
-            "title": "Автомобили",
-            "description": "Описание категории Автомобили",
+            "title_ru": "Автомобили",
+            "title_en": "Auto",
+            "description_ru": "Описание категории Автомобили",
+            "description_en": "Description category Auto",
         },
         {
             "id": 3,
-            "title": "Спорт",
-            "description": "Описание категории Спорт",
+            "title_ru": "Спорт",
+            "title_en": "Sport",
+            "description_ru": "Описание категории Спорт",
+            "description_en": "Description category Sport",
         },
         {
             "id": 4,
-            "title": "Музыка",
-            "description": "Описание категории Музыка",
+            "title_ru": "Музыка",
+            "title_en": "Music",
+            "description_ru": "Описание категории Музыка",
+            "description_en": "Description Category Music",
         },
     ]
 

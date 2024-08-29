@@ -1,5 +1,5 @@
 {% load static %}
- 
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -72,44 +72,44 @@
 						<div class="header-nav navbar-collapse collapse justify-content-center nav-dark" id="navbarNavDropdown">
 							<ul class="nav navbar-nav">	
 								<li class="active">
-									<a href="javascript:void(0);">Home </a>
+									<a href="javascript:void(0);">{% trans "Home " %}</a>
 									<ul class="sub-menu">
-										<li><a href="/blog/">Home 01</a></li>
-										{% comment %} <li><a href="index-2.html">Home 02</a></li>
-										<li><a href="index-3.html">Home 03</a></li>
-										<li><a href="index-4.html">Home 04</a></li>
-										<li><a href="index-5.html">Home 05</a></li> {% endcomment %}
+										<li><a href="/blog/">{% trans "Home 01" %}</a></li>
+										{% comment %} <li><a href="index-2.html">{% trans "Home 02" %}</a></li>
+										<li><a href="index-3.html">{% trans "Home 03" %}</a></li>
+										<li><a href="index-4.html">{% trans "Home 04" %}</a></li>
+										<li><a href="index-5.html">{% trans "Home 05" %}</a></li> {% endcomment %}
 									</ul>	
 								</li>
 								<li>
-									<a href="javascript:void(0);">Featured </a>
+									<a href="javascript:void(0);">{% trans "Featured " %}</a>
 									<ul class="sub-menu">
-										<li><a href="/blog/postlist/">Post List</a></li>
-										{% comment %} <li><a href="post-standart.html">Post Standart</a></li>
-										<li><a href="post-left-sidebar.html">Post Left Sidebar</a></li>
-										<li><a href="post-full-width.html">Post Full Width</a></li>
-										<li><a href="post-slide-show.html">Post Slide Show</a></li>
-										<li><a href="post-header-image.html">Post Header Image</a></li>
-										<li><a href="post-gallery.html">Post Gallery</a></li>
-										<li><a href="post-audio.html">Post Audio</a></li>
-										<li><a href="post-video.html">Post Video</a></li>
-										<li><a href="post-side-image.html">Post Side Image</a></li>
-										<li><a href="post-without-image.html">Post Without Image</a></li>
-										<li><a href="post-open-gutenberg.html">Post Open Gutenberg</a></li> {% endcomment %}
+										<li><a href="/blog/postlist/">{% trans "Post List" %}</a></li>
+										{% comment %} <li><a href="post-standart.html">{% trans "Post Standart" %}</a></li>
+										<li><a href="post-left-sidebar.html">{% trans "Post Left Sidebar" %}</a></li>
+										<li><a href="post-full-width.html">{% trans "Post Full Width" %}</a></li>
+										<li><a href="post-slide-show.html">{% trans "Post Slide Show" %}</a></li>
+										<li><a href="post-header-image.html">{% trans "Post Header Image" %}</a></li>
+										<li><a href="post-gallery.html">{% trans "Post Gallery" %}</a></li>
+										<li><a href="post-audio.html">{% trans "Post Audio" %}</a></li>
+										<li><a href="post-video.html">{% trans "Post Video" %}</a></li>
+										<li><a href="post-side-image.html">{% trans "Post Side Image" %}</a></li>
+										<li><a href="post-without-image.html">{% trans "Post Without Image" %}</a></li>
+										<li><a href="post-open-gutenberg.html">{% trans "Post Open Gutenberg" %}</a></li> {% endcomment %}
 									</ul>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Pages </a>
+									<a href="javascript:void(0);">{% trans "Pages " %}</a>
 									<ul class="sub-menu">
-										<li><a href="about-us.html">About Us</a></li>
-										<li><a href="error-404.html">Error 404</a></li>
-										<li><a href="shop-product.html">Shop Product</a></li>
-										<li><a href="shopping-cart.html">Shopping Cart</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="product-details.html">Product Details</a></li>
+										<li><a href="about-us.html">{% trans "About Us" %}</a></li>
+										<li><a href="error-404.html">{% trans "Error 404" %}</a></li>
+										<li><a href="shop-product.html">{% trans "Shop Product" %}</a></li>
+										<li><a href="shopping-cart.html">{% trans "Shopping Cart" %}</a></li>
+										<li><a href="checkout.html">{% trans "Checkout" %}</a></li>
+										<li><a href="product-details.html">{% trans "Product Details" %}</a></li>
 									</ul>
 								</li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="contact.html">{% trans "Contact" %}</a></li>
 							</ul>
 						</div>
 					</div>
@@ -124,44 +124,44 @@
 			</div>
 			<ul class="nav navbar-nav">	
 				<li class="active">
-					<a href="javascript:void(0);">Home </a>
+					<a href="javascript:void(0);">{% trans "Home " %}</a>
 					<ul class="sub-menu">
-						<li><a href="/blog/">Home 01</a></li>
-						{% comment %} <li><a href="index-2.html">Home 02</a></li>
-						<li><a href="index-3.html">Home 03</a></li>
-						<li><a href="index-4.html">Home 04</a></li>
-						<li><a href="index-5.html">Home 05</a></li> {% endcomment %}
+						<li><a href="/blog/">{% trans "Home 01" %}</a></li>
+						{% comment %} <li><a href="index-2.html">{% trans "Home 02" %}</a></li>
+						<li><a href="index-3.html">{% trans "Home 03" %}</a></li>
+						<li><a href="index-4.html">{% trans "Home 04" %}</a></li>
+						<li><a href="index-5.html">{% trans "Home 05" %}</a></li> {% endcomment %}
 					</ul>	
 				</li>
 				<li>
-					<a href="javascript:void(0);">Featured </a>
+					<a href="javascript:void(0);">{% trans "Featured " %}</a>
 					<ul class="sub-menu">
-						<li><a href="postlist/">Post List</a></li>
-						{% comment %} <li><a href="post-standart.html">Post Standart</a></li>
-						<li><a href="post-left-sidebar.html">Post Left Sidebar</a></li>
-						<li><a href="post-full-width.html">Post Full Width</a></li>
-						<li><a href="post-slide-show.html">Post Slide Show</a></li>
-						<li><a href="post-header-image.html">Post Header Image</a></li>
-						<li><a href="post-gallery.html">Post Gallery</a></li>
-						<li><a href="post-audio.html">Post Audio</a></li>
-						<li><a href="post-video.html">Post Video</a></li>
-						<li><a href="post-side-image.html">Post Side Image</a></li>
-						<li><a href="post-without-image.html">Post Without Image</a></li>
-						<li><a href="post-open-gutenberg.html">Post Open Gutenberg</a></li> {% endcomment %}
+						<li><a href="postlist/">{% trans "Post List" %}</a></li>
+						{% comment %} <li><a href="post-standart.html">{% trans "Post Standart" %}</a></li>
+						<li><a href="post-left-sidebar.html">{% trans "Post Left Sidebar" %}</a></li>
+						<li><a href="post-full-width.html">{% trans "Post Full Width" %}</a></li>
+						<li><a href="post-slide-show.html">{% trans "Post Slide Show" %}</a></li>
+						<li><a href="post-header-image.html">{% trans "Post Header Image" %}</a></li>
+						<li><a href="post-gallery.html">{% trans "Post Gallery" %}</a></li>
+						<li><a href="post-audio.html">{% trans "Post Audio" %}</a></li>
+						<li><a href="post-video.html">{% trans "Post Video" %}</a></li>
+						<li><a href="post-side-image.html">{% trans ""Post Side Image %}</a></li>
+						<li><a href="post-without-image.html">{% trans "Post Without Image" %}</a></li>
+						<li><a href="post-open-gutenberg.html">{% trans "Post Open Gutenberg" %}</a></li> {% endcomment %}
 					</ul>
 				</li>
 				<li>
-					<a href="javascript:void(0);">Pages </a>
+					<a href="javascript:void(0);">{% trans "Pages " %}</a>
 					<ul class="sub-menu">
-						<li><a href="about-us.html">About Us</a></li>
-						<li><a href="error-404.html">Error 404</a></li>
-						<li><a href="shop-product.html">Shop Product</a></li>
-						<li><a href="shopping-cart.html">Shopping Cart</a></li>
-						<li><a href="checkout.html">Checkout</a></li>
-						<li><a href="product-details.html">Product Details</a></li>
+						<li><a href="about-us.html">{% trans "About Us" %}</a></li>
+						<li><a href="error-404.html">{% trans "Error 404" %}</a></li>
+						<li><a href="shop-product.html">{% trans "Shop Product" %}</a></li>
+						<li><a href="shopping-cart.html">{% trans "Shopping Cart" %}</a></li>
+						<li><a href="checkout.html">{% trans "Checkout" %}</a></li>
+						<li><a href="product-details.html">{% trans "Product Details" %}</a></li>
 					</ul>
 				</li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="contact.html">{% trans "Contact" %}</a></li>
 			</ul>
 			<div class="logo-header">
 				<a href="index.html"><img src="{% static "images/logo.png" %}" alt=""/></a>
@@ -233,15 +233,15 @@
 				<form action="script/mailchamp.php" method="post" class="row m-lr0 align-items-center dezPlaceAni dzSubscribe">
 					<div class="col-xl-6 col-lg-6 col-md-12">
 						<div class="title-bx">
-							<h2 class="m-b0">Join Our Newslatter!</h2>
+							<h2 class="m-b0">{% trans "Join Our Newslatter!" %}</h2>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-12 contact-form-bx">
 						<div class="form-group">
 							<div class="input-group">
-								<label>Your Email Address</label>
+								<label>{% trans "Your Email Address" %}</label>
 								<input name="dzEmail" required="required" type="email" class="form-control" placeholder="" >
-								<button name="submit" value="Submit" type="submit" class="btn-link">Subscribe</button>
+								<button name="submit" value="Submit" type="submit" class="btn-link">{% trans "Subscribe" %}</button>
 							</div>
 							<div class="dzSubscribeMsg"></div>
 						</div>
@@ -303,9 +303,9 @@
 				<div class="row">
 					<div class="col-lg-4">
 						<ul class="footer-link m-b0">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about-us.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="index.html">{% trans "Home" %}</a></li>
+							<li><a href="about-us.html">{% trans "About" %}</a></li>
+							<li><a href="contact.html">{% trans "Contact" %}</a></li>
 						</ul>						
 					</div>
 					<div class="col-lg-4">

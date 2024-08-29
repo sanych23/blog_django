@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-28 14:00+0300\n"
+"POT-Creation-Date: 2024-08-29 09:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,25 +16,321 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: .\blog\templates\index.html:11
-msgid "Location"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\blog\templates\index.html:11 .\blog\templates\index.html:130
+msgid "Miami, Florida, USA"
 msgstr ""
 
 #: .\blog\templates\index.html:31
-msgid "Welcome"
-msgstr "Добро пожаловать"
+msgid "Welcome to"
+msgstr "Добро Пожаловать в"
 
 #: .\blog\templates\index.html:32
-msgid "Test"
-msgstr "Тест"
+msgid "My Blog"
+msgstr "Мой блог"
 
-#: .\mysite\settings.py:122
-msgid "English"
-msgstr "English"
+#: .\blog\templates\index.html:80 .\blog\templates\index.html:302
+#: .\blog\templates\layouts\default.html:310
+msgid "Home"
+msgstr "Домашняя"
+
+#: .\blog\templates\index.html:82 .\blog\templates\index.html:136
+#: .\blog\templates\layouts\default.html:77
+#: .\blog\templates\layouts\default.html:131
+msgid "Home 01"
+msgstr "Домашняя 01"
+
+#: .\blog\templates\index.html:91
+msgid "Featured"
+msgstr "Избранное"
+
+#: .\blog\templates\index.html:93
+msgid "Post list"
+msgstr "Список постов"
+
+#: .\blog\templates\index.html:109 .\blog\templates\index.html:163
+#: .\blog\templates\layouts\default.html:104
+#: .\blog\templates\layouts\default.html:158
+msgid "Pages "
+msgstr "Страницы"
+
+#: .\blog\templates\index.html:111 .\blog\templates\index.html:165
+#: .\blog\templates\layouts\default.html:106
+#: .\blog\templates\layouts\default.html:160
+msgid "About Us"
+msgstr "О нас"
+
+#: .\blog\templates\index.html:112 .\blog\templates\index.html:166
+#: .\blog\templates\layouts\default.html:107
+#: .\blog\templates\layouts\default.html:161
+msgid "Error 404"
+msgstr "Ошибка 404"
+
+#: .\blog\templates\index.html:113 .\blog\templates\index.html:167
+#: .\blog\templates\layouts\default.html:108
+#: .\blog\templates\layouts\default.html:162
+msgid "Shop Product"
+msgstr "Магазин продуктов"
+
+#: .\blog\templates\index.html:114 .\blog\templates\index.html:168
+#: .\blog\templates\layouts\default.html:109
+#: .\blog\templates\layouts\default.html:163
+msgid "Shopping Cart"
+msgstr "Магазинная карточка"
+
+#: .\blog\templates\index.html:115 .\blog\templates\index.html:169
+#: .\blog\templates\layouts\default.html:110
+#: .\blog\templates\layouts\default.html:164
+msgid "Checkout"
+msgstr "Проверка"
+
+#: .\blog\templates\index.html:116 .\blog\templates\index.html:170
+#: .\blog\templates\layouts\default.html:111
+#: .\blog\templates\layouts\default.html:165
+msgid "Product Details"
+msgstr "Детали продукта"
+
+#: .\blog\templates\index.html:119 .\blog\templates\index.html:173
+#: .\blog\templates\index.html:304 .\blog\templates\layouts\default.html:114
+#: .\blog\templates\layouts\default.html:168
+#: .\blog\templates\layouts\default.html:312
+msgid "Contact"
+msgstr "Контакты"
+
+#: .\blog\templates\index.html:134 .\blog\templates\layouts\default.html:75
+#: .\blog\templates\layouts\default.html:129
+msgid "Home "
+msgstr "Домашняя"
+
+#: .\blog\templates\index.html:145 .\blog\templates\layouts\default.html:86
+#: .\blog\templates\layouts\default.html:140
+msgid "Featured "
+msgstr "Избранное"
+
+#: .\blog\templates\index.html:147 .\blog\templates\layouts\default.html:88
+#: .\blog\templates\layouts\default.html:142
+msgid "Post List"
+msgstr "Список постов"
+
+#: .\blog\templates\index.html:231 .\blog\templates\layouts\default.html:240
+msgid "Join Our Newslatter!"
+msgstr "Подпишитесь на нашу рассылку!"
+
+#: .\blog\templates\index.html:237 .\blog\templates\layouts\default.html:246
+msgid "Your Email Address"
+msgstr "Ваш электронный адресс"
+
+#: .\blog\templates\index.html:239 .\blog\templates\layouts\default.html:248
+msgid "Subscribe"
+msgstr "Подписка"
+
+#: .\blog\templates\index.html:303 .\blog\templates\layouts\default.html:311
+#, fuzzy
+#| msgid "About Us"
+msgid "About"
+msgstr "О нас"
+
+#: .\blog\templates\layouts\main_layout.html:52
+msgid "Trending Posts"
+msgstr "Популярные посты"
+
+#: .\blog\templates\layouts\main_layout.html:62
+msgid "Love in Las Vegas"
+msgstr "Любовь в Лас-Вегасе"
+
+#: .\blog\templates\layouts\main_layout.html:88 .\blog\templates\post.html:95
+msgid "February Things"
+msgstr "Февральские мысли"
+
+#: .\blog\templates\layouts\main_layout.html:101
+msgid "Beauty Routine"
+msgstr "Красивые будни"
+
+#: .\blog\templates\layouts\main_layout.html:114
+msgid "Hair for Spring"
+msgstr "Волосы на весну"
+
+#: .\blog\templates\layouts\main_layout.html:137
+msgid "Cozy Valentines Ideas"
+msgstr "Уютные идеи для валентинок"
+
+#: .\blog\templates\layouts\main_layout.html:143
+#: .\blog\templates\layouts\main_layout.html:161
+#: .\blog\templates\layouts\main_layout.html:179
+#: .\blog\templates\layouts\main_layout.html:197
+#: .\blog\templates\layouts\main_layout.html:215
+#: .\blog\templates\layouts\main_layout.html:287
+#: .\blog\templates\layouts\main_layout.html:305
+#: .\blog\templates\layouts\main_layout.html:323
+#: .\blog\templates\layouts\main_layout.html:341
+#: .\blog\templates\postlist.html:24
+msgid "Read More"
+msgstr "Читайте больше"
+
+#: .\blog\templates\layouts\main_layout.html:155 .\blog\templates\post.html:85
+msgid "Crafts for Kids"
+msgstr "Поделки для детей"
+
+#: .\blog\templates\layouts\main_layout.html:173
+msgid "Packing Orlando"
+msgstr "Упаковка Орландо"
+
+#: .\blog\templates\layouts\main_layout.html:191
+msgid "Disney World"
+msgstr "Мир Дисней"
+
+#: .\blog\templates\layouts\main_layout.html:209
+msgid "March Things"
+msgstr "Мартовские мысли"
+
+#: .\blog\templates\layouts\main_layout.html:240
+#: .\blog\templates\layouts\main_layout.html:251
+#: .\blog\templates\layouts\main_layout.html:262
+msgid "Absolutely All-In Romance"
+msgstr "Абсолютно всё в романтике"
+
+#: .\blog\templates\layouts\main_layout.html:281
+msgid "Glacier Tour"
+msgstr "Тур по леднику"
+
+#: .\blog\templates\layouts\main_layout.html:299
+msgid "Effortless Look"
+msgstr "Непринужденный вид"
+
+#: .\blog\templates\layouts\main_layout.html:317
+msgid "Sunsets Beach"
+msgstr "Солнечный пляж"
+
+#: .\blog\templates\layouts\main_layout.html:335
+msgid "Spring Stripes"
+msgstr "Весенняя полоса"
+
+#: .\blog\templates\layouts\main_layout.html:361
+#: .\blog\templates\sidebar.html:89
+msgid "Want More?"
+msgstr "Хотите больше?"
+
+#: .\blog\templates\layouts\main_layout.html:376
+msgid "Category"
+msgstr "Категории"
+
+#: .\blog\templates\layouts\main_layout.html:378
+msgid "Beauty"
+msgstr "Красота"
+
+#: .\blog\templates\layouts\main_layout.html:379
+msgid "Travel"
+msgstr "Путешествия"
+
+#: .\blog\templates\layouts\main_layout.html:380
+msgid "Lifestyle"
+msgstr "Образ жизни"
+
+#: .\blog\templates\layouts\main_layout.html:381
+msgid "Fashion"
+msgstr "Мода"
+
+#: .\blog\templates\popularPosts.html:3 .\blog\templates\sidebar.html:20
+msgid "Popular Posts"
+msgstr "Популярные посты"
+
+#: .\blog\templates\post.html:28
+msgid "by"
+msgstr "от"
+
+#: .\blog\templates\post.html:32 .\blog\templates\postlist.html:25
+msgid "views"
+msgstr "Просмотры"
+
+#: .\blog\templates\post.html:33 .\blog\templates\postlist.html:26
+msgid "comments"
+msgstr "Комментарии"
+
+#: .\blog\templates\post.html:38
+msgid "Write A Comment"
+msgstr "Напишите комментарий"
+
+#: .\blog\templates\post.html:49
+#, fuzzy
+#| msgid "About Us"
+msgid "About Author"
+msgstr "О нас"
+
+#: .\blog\templates\post.html:74
+msgid "Top Posts"
+msgstr "Лучшие посты"
+
+#: .\blog\templates\post.html:109
+msgid "Reviews"
+msgstr "Обзоры"
+
+#: .\blog\templates\post.html:140
+msgid "Leave a Reply"
+msgstr "Оставить ответ"
+
+#: .\blog\templates\post.html:146
+msgid "Cancel reply"
+msgstr "Закрыть ответ"
+
+#: .\blog\templates\post.html:149
+msgid "Name "
+msgstr "Имя"
+
+#: .\blog\templates\post.html:157
+msgid "Comment"
+msgstr "Комментарий"
+
+#: .\blog\templates\sidebar.html:6
+msgid "Current Location"
+msgstr "Текущая локация"
+
+#: .\blog\templates\sidebar.html:9
+msgid "Located at:"
+msgstr "Находится в:"
+
+#: .\blog\templates\sidebar.html:15
+msgid "Meet Lida..."
+msgstr "Познакомьтесь с Лидой..."
+
+#: .\blog\templates\sidebar.html:28
+msgid "Staple Fashion Buys"
+msgstr "Основныемодные покупки"
+
+#: .\blog\templates\sidebar.html:41
+msgid "Swimsuit Season"
+msgstr "Плавательный сезон"
+
+#: .\blog\templates\sidebar.html:54
+msgid "Summer Shoe Guide"
+msgstr "Путеводитель по летней обуви"
+
+#: .\blog\templates\sidebar.html:67
+msgid "Nike With My Mini"
+msgstr "Nike с моим мини"
+
+#: .\blog\templates\sidebar.html:106
+msgid "Beauty "
+msgstr "Красота "
+
+#: .\blog\templates\sidebar.html:107
+msgid "Travel "
+msgstr "Путешествия "
+
+#: .\blog\templates\sidebar.html:108
+msgid "Lifestyle "
+msgstr "Стиль жизни "
+
+#: .\blog\templates\sidebar.html:109
+msgid "Fashion "
+msgstr "Мода "
 
 #: .\mysite\settings.py:123
+msgid "English"
+msgstr "Английский"
+
+#: .\mysite\settings.py:124
 msgid "Russian"
-msgstr "Russian"
+msgstr "Русский"

@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +50,7 @@
 		<div class="section-full bg-white content-inner-1">
 			<div class="container-fluid">
 				<div class="section-head text-center">
-					<h4 class="title text-uppercase">Trending Posts</h4>
+					<h4 class="title text-uppercase">{% trans "Trending Posts" %}</h4>
 					<div class="title-separate"></div>
 				</div>
 				<div class="trending-post-bx owl-carousel owl-btn-center-lr">
@@ -59,7 +60,7 @@
 								<img src="{% static 'images/trending/pic1.jpg' %}" alt=""/>
 							</div>
 							<div class="trending-info">
-								<h3 class="trending-title"><a href="post-standart.html">Love in Las Vegas</a></h3>
+								<h3 class="trending-title"><a href="post-standart.html">{% trans "Love in Las Vegas" %}</a></h3>
 								<div class="post-date">
 									27 <span>02 </span> 2020
 								</div>
@@ -85,7 +86,7 @@
 								<img src="{% static 'images/trending/pic3.jpg' %}" alt=""/>
 							</div>
 							<div class="trending-info">
-								<h3 class="trending-title"><a href="post-full-width.html">February Things</a></h3>
+								<h3 class="trending-title"><a href="post-full-width.html">{% trans "February Things" %}</a></h3>
 								<div class="post-date">
 									25 <span>02 </span> 2020
 								</div>
@@ -98,7 +99,7 @@
 								<img src="{% static 'images/trending/pic4.jpg' %}" alt=""/>
 							</div>
 							<div class="trending-info">
-								<h3 class="trending-title"><a href="post-slide-show.html">Beauty Routine</a></h3>
+								<h3 class="trending-title"><a href="post-slide-show.html">{% trans "Beauty Routine" %}</a></h3>
 								<div class="post-date">
 									24 <span>02 </span> 2020
 								</div>
@@ -111,7 +112,7 @@
 								<img src="{% static 'images/trending/pic5.jpg' %}" alt=""/>
 							</div>
 							<div class="trending-info">
-								<h3 class="trending-title"><a href="post-header-image.html">Hair for Spring</a></h3>
+								<h3 class="trending-title"><a href="post-header-image.html">{% trans "Hair for Spring" %}</a></h3>
 								<div class="post-date">
 									23 <span>02 </span> 2020
 								</div>
@@ -134,13 +135,13 @@
 										<img src="{% static 'images/blog/blog-lg/pic1.jpg' %}" alt=""/>
 									</div>
 									<div class="blog-card-info text-center">
-										<h2 class="title"><a href="post-gallery.html">Cozy Valentines Ideas</a></h2>
+										<h2 class="title"><a href="post-gallery.html">{% trans "Cozy Valentines Ideas" %}</a></h2>
 										<div class="post-date">
 											23 <span>02 </span> 2020
 										</div>
 										<ul class="add-info">
 											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
-											<li><a href="post-gallery.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="post-gallery.html" class="btn outline radius-no white">{% trans "Read More" %}</a></li>
 											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
 										</ul>
 									</div>
@@ -152,13 +153,13 @@
 										<img src="{% static 'images/blog/blog-md/pic1.jpg' %}" alt=""/>
 									</div>
 									<div class="blog-card-info text-center">
-										<h2 class="title"><a href="post-audio.html">Crafts for Kids</a></h2>
+										<h2 class="title"><a href="post-audio.html">{% trans "Crafts for Kids" %}</a></h2>
 										<div class="post-date">
 											23 <span>02 </span> 2020
 										</div>
 										<ul class="add-info">
 											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
-											<li><a href="post-audio.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="post-audio.html" class="btn outline radius-no white">{% trans "Read More" %}</a></li>
 											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
 										</ul>
 									</div>
@@ -170,13 +171,13 @@
 										<img src="{% static 'images/blog/blog-md/pic2.jpg' %}" alt=""/>
 									</div>
 									<div class="blog-card-info text-center">
-										<h2 class="title"><a href="post-video.html">Packing Orlando</a></h2>
+										<h2 class="title"><a href="post-video.html">{% trans "Packing Orlando" %}</a></h2>
 										<div class="post-date">
 											23 <span>02 </span> 2020
 										</div>
 										<ul class="add-info">
 											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
-											<li><a href="post-video.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="post-video.html" class="btn outline radius-no white">{% trans "Read More" %}</a></li>
 											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
 										</ul>
 									</div>
@@ -188,13 +189,13 @@
 										<img src="{% static 'images/blog/blog-md/pic3.jpg' %}" alt=""/>
 									</div>
 									<div class="blog-card-info text-center">
-										<h2 class="title"><a href="post-side-image.html">Disney World</a></h2>
+										<h2 class="title"><a href="post-side-image.html">{% trans "Disney World" %}</a></h2>
 										<div class="post-date">
 											23 <span>02 </span> 2020
 										</div>
 										<ul class="add-info">
 											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
-											<li><a href="post-side-image.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="post-side-image.html" class="btn outline radius-no white">{% trans "Read More" %}</a></li>
 											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
 										</ul>
 									</div>
@@ -206,13 +207,13 @@
 										<img src="{% static 'images/blog/blog-md/pic4.jpg' %}" alt=""/>
 									</div>
 									<div class="blog-card-info text-center">
-										<h2 class="title"><a href="post-without-image.html">March Things</a></h2>
+										<h2 class="title"><a href="post-without-image.html">{% trans "March Things" %}</a></h2>
 										<div class="post-date">
 											23 <span>02 </span> 2020
 										</div>
 										<ul class="add-info">
 											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
-											<li><a href="post-without-image.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="post-without-image.html" class="btn outline radius-no white">{% trans "Read More" %}</a></li>
 											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
 										</ul>
 									</div>
@@ -237,7 +238,7 @@
 							<div class="post-thumb">
 								<img src="{% static 'images/blog-slider/pic1.jpg' %}" alt="">
 							</div>
-							<h2 class="title"><a href="post-standart.html">Absolutely All-In Romance</a></h2>
+							<h2 class="title"><a href="post-standart.html">{% trans "Absolutely All-In Romance" %}</a></h2>
 						</div>
 					</div>
 					<div class="item">
@@ -248,7 +249,7 @@
 							<div class="post-thumb">
 								<img src="{% static 'images/blog-slider/pic2.jpg' %}" alt="">
 							</div>
-							<h2 class="title"><a href="post-left-sidebar.html">Absolutely All-In Romance</a></h2>
+							<h2 class="title"><a href="post-left-sidebar.html">{% trans "Absolutely All-In Romance" %}</a></h2>
 						</div>
 					</div>
 					<div class="item">
@@ -259,7 +260,7 @@
 							<div class="post-thumb">
 								<img src="{% static 'images/blog-slider/pic3.jpg' %}" alt="">
 							</div>
-							<h2 class="title"><a href="post-full-width.html">Absolutely All-In Romance</a></h2>
+							<h2 class="title"><a href="post-full-width.html">{% trans "Absolutely All-In Romance" %}</a></h2>
 						</div>
 					</div>
 				</div>
@@ -278,13 +279,13 @@
 										<img src="{% static 'images/blog/blog-md/pic5.jpg' %}" alt=""/>
 									</div>
 									<div class="blog-card-info text-center">
-										<h2 class="title"><a href="post-slide-show.html">Glacier Tour</a></h2>
+										<h2 class="title"><a href="post-slide-show.html">{% trans "Glacier Tour" %}</a></h2>
 										<div class="post-date">
 											23 <span>02 </span> 2020
 										</div>
 										<ul class="add-info">
 											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
-											<li><a href="post-slide-show.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="post-slide-show.html" class="btn outline radius-no white">{% trans "Read More" %}</a></li>
 											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
 										</ul>
 									</div>
@@ -296,13 +297,13 @@
 										<img src="{% static 'images/blog/blog-md/pic6.jpg' %}" alt=""/>
 									</div>
 									<div class="blog-card-info text-center">
-										<h2 class="title"><a href="post-header-image.html">Effortless Look</a></h2>
+										<h2 class="title"><a href="post-header-image.html">{% trans "Effortless Look" %}</a></h2>
 										<div class="post-date">
 											23 <span>02 </span> 2020
 										</div>
 										<ul class="add-info">
 											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
-											<li><a href="post-header-image.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="post-header-image.html" class="btn outline radius-no white">{% trans "Read More" %}</a></li>
 											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
 										</ul>
 									</div>
@@ -314,13 +315,13 @@
 										<img src="{% static 'images/blog/blog-md/pic7.jpg' %}" alt=""/>
 									</div>
 									<div class="blog-card-info text-center">
-										<h2 class="title"><a href="post-gallery.html">Sunsets Beach</a></h2>
+										<h2 class="title"><a href="post-gallery.html">{% trans "Sunsets Beach" %}</a></h2>
 										<div class="post-date">
 											23 <span>02 </span> 2020
 										</div>
 										<ul class="add-info">
 											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
-											<li><a href="post-gallery.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="post-gallery.html" class="btn outline radius-no white">{% trans "Read More" %}</a></li>
 											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
 										</ul>
 									</div>
@@ -332,13 +333,13 @@
 										<img src="{% static 'images/blog/blog-md/pic8.jpg' %}" alt=""/>
 									</div>
 									<div class="blog-card-info text-center">
-										<h2 class="title"><a href="post-audio.html">Spring Stripes</a></h2>
+										<h2 class="title"><a href="post-audio.html">{% trans "Spring Stripes" %}</a></h2>
 										<div class="post-date">
 											23 <span>02 </span> 2020
 										</div>
 										<ul class="add-info">
 											<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i><span>9</span></a></li>
-											<li><a href="post-audio.html" class="btn outline radius-no white">Read More</a></li>
+											<li><a href="post-audio.html" class="btn outline radius-no white">{% trans "Read More" %}</a></li>
 											<li><a href="javascript:void(0);"><i class="la la-comment"></i><span>3</span></a></li>
 										</ul>
 									</div>
@@ -358,7 +359,7 @@
 							<div class="widget widget-newsletter">
 								<div class="news-box text-center">
 									<form class="dzSubscribe" action="script/mailchamp.php" method="post">
-										<h6>Want More?</h6>
+										<h6>{% trans "Want More?" %}</h6>
 										<p>Sed bibendum massa id luctus cras et lorem feugiat.</p>
 										<div class="input-group">
 											<input name="dzEmail" required="required" type="email" class="form-control" placeholder="Your Email">
@@ -373,12 +374,12 @@
 								</div>
 							</div>
 							<div class="widget widget_categories">
-								<h6 class="widget-title">Category</h6>
+								<h6 class="widget-title">{% trans "Category" %}</h6>
 								<ul>
-									<li><a href="javascript:void(0);">Beauty </a> 15 </li>
-									<li><a href="javascript:void(0);">Travel </a> 17 </li>
-									<li><a href="javascript:void(0);">Lifestyle </a> 18 </li>
-									<li><a href="javascript:void(0);">Fashion </a> 9 </li>
+									<li><a href="javascript:void(0);">{% trans "Beauty" %} </a> 15 </li>
+									<li><a href="javascript:void(0);">{% trans "Travel" %} </a> 17 </li>
+									<li><a href="javascript:void(0);">{% trans "Lifestyle" %} </a> 18 </li>
+									<li><a href="javascript:void(0);">{% trans "Fashion" %} </a> 9 </li>
 								</ul>
 							</div>
 							<div class="widget widget_mailbox">

@@ -1,6 +1,7 @@
 {% load static %}
+{% load i18n %}
 <div class="widget recent-posts-entry">
-    <h5 class="widget-title">Popular Posts</h5>
+    <h5 class="widget-title">{% trans "Popular Posts" %}</h5>
     <div class="widget-post-bx">
         {% for post in populars %}
             <div class="widget-post clearfix">

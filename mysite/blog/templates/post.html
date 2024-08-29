@@ -1,5 +1,6 @@
 {% extends "layouts/default.html" %}
 {% load static %}
+{% load i18n %}
 
 
 {% block content %}
@@ -25,17 +26,17 @@
 			<p>{{post.content}}</p>
 			<div class="row post-footer m-lr0">
 				<div class="col-lg-4 p-lr0 m-b30">												 
-					<span class="m-r5">by</span> <a href="javascript:void(0);" class="text-uppercase">Carey Ferguson</a> 
+					<span class="m-r5">{% trans "by" %}</span> <a href="javascript:void(0);" class="text-uppercase">{{ post.author.name }}</a> 
 				</div>
 				<div class="col-lg-4 p-lr0 m-b30 text-center">
 					<ul class="add-info">
-						<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i> views:<span>{{ post.view_count }}</span></a></li>
-						<li><a href="javascript:void(0);"><i class="la la-comment"></i> comments:<span>{{ post.countComment }}</span></a></li>
+						<li><a href="javascript:void(0);"><i class="la la-share-alt-square"></i> {% trans "views" %}:<span>{{ post.view_count }}</span></a></li>
+						<li><a href="javascript:void(0);"><i class="la la-comment"></i> {% trans "comments" %}:<span>{{ post.countComment }}</span></a></li>
 					</ul>
 				</div>
 				<div class="col-lg-4 p-lr0 m-b30">
 					<div class="text-right">
-						<a href="javascript:void(0);" class="text-uppercase">Write A Comment</a>
+						<a href="javascript:void(0);" class="text-uppercase">{% trans "Write A Comment" %}</a>
 					</div>
 				</div>
 			</div>
@@ -46,7 +47,7 @@
 	<div class="row m-b60">
 		<div class="col-lg-3">
 			<div class="sticky-top">
-				<h6 class="title-style1 text-uppercase">About Author</h6>
+				<h6 class="title-style1 text-uppercase">{% trans "About Author" %}</h6>
 			</div>
 		</div>
 		<div class="col-lg-9">
@@ -56,7 +57,7 @@
 						<img src="{% static "images/testimonials/pic1.jpg" %}" alt="">
 					</div>
 					<div class="author-profile-content">
-						<h6>Carey Ferguson</h6>
+						<h6>{{ post.author.name }}</h6>
 						<ul class="list-inline m-b0">
 							<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-instagram"></i></a></li>
 							<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-twitter"></i></a></li>
@@ -71,7 +72,7 @@
 	<div class="row m-b30">
 		<div class="col-lg-3">
 			<div class="sticky-top">
-				<h6 class="title-style1 text-uppercase">Top Posts</h6>
+				<h6 class="title-style1 text-uppercase">{% trans "Top Posts" %}</h6>
 			</div>
 		</div>
 		<div class="col-lg-9">
@@ -82,7 +83,7 @@
 							<img src="{% static "images/category/pic1.jpg" %}" alt="">
 						</div>
 						<div class="category-info bg-dark p-a20 text-center">
-							<h6 class="title m-b0"><a href="post-video.html">Crafts for Kids</a></h6>
+							<h6 class="title m-b0"><a href="post-video.html">{% trans "Crafts for Kids" %}</a></h6>
 						</div>
 					</div>
 				</div>
@@ -92,7 +93,7 @@
 							<img src="{% static "images/category/pic2.jpg" %}" alt="">
 						</div>
 						<div class="category-info bg-dark p-a20 text-center">
-							<h6 class="title m-b0"><a href="post-video.html">February Things</a></h6>
+							<h6 class="title m-b0"><a href="post-video.html">{% trans "February Things" %}</a></h6>
 						</div>
 					</div>
 				</div>
@@ -106,7 +107,7 @@
 				<div class="row m-b30">
 					<div class="col-lg-3">
 						<div class="sticky-top">
-							<h6 class="title-style1 text-uppercase">Reviews</h6>
+							<h6 class="title-style1 text-uppercase">{% trans "Reviews" %}</h6>
 						</div>
 					</div>
 					<div class="col-lg-9">
@@ -137,16 +138,16 @@
 			<div class="row">
 				<div class="col-lg-3">
 					<div class="sticky-top">
-						<h6 class="title-style1 text-uppercase">Leave a Reply</h6>
+						<h6 class="title-style1 text-uppercase">{% trans "Leave a Reply" %}</h6>
 					</div>
 				</div>
 				<div class="col-lg-9">
 					<!-- Form -->
 					<div class="comment-respond" id="respond">
-						<h3 class="comment-reply-title" id="reply-title"><small> <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a> </small> </h3>
+						<h3 class="comment-reply-title" id="reply-title"><small> <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">{% trans "Cancel reply" %}</a> </small> </h3>
 						<form class="comment-form" id="commentform" method="post">
 							<p class="comment-form-author">
-								<label for="author">Name <span class="required">*</span></label>
+								<label for="author">{% trans "Name " %}<span class="required">*</span></label>
 								<input type="text" value="" placeholder="Author" id="author">
 							</p>
 							<p class="comment-form-email">
@@ -154,7 +155,7 @@
 								<input type="text" value="" placeholder="Email" id="email">
 							</p>
 							<p class="comment-form-comment">
-								<label for="comment">Comment</label>
+								<label for="comment">{% trans "Comment" %}</label>
 								<textarea rows="8" placeholder="Add a Comment" id="comment"></textarea>
 							</p>
 							<p class="form-submit">

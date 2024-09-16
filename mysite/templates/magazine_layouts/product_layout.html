@@ -1,0 +1,311 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="description" content="Bucklin : Blog HTML Template" />
+	<meta property="og:title" content="Bucklin : Blog HTML Template" />
+	<meta property="og:description" content="Bucklin : Blog HTML Template" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	
+	<!-- PAGE TITLE HERE -->
+	<title>Bucklin : Blog HTML Template</title>
+	
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/plugins.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/templete.css" %}">
+	<link class="skin" rel="stylesheet" type="text/css" href="{% static "css/skin/skin-1.css" %}">
+
+</head>
+<body id="bg">
+<div class="page-wraper">
+<div id="loading-area"></div>
+	<!-- header -->
+	<header class="site-header mo-left header-full header bg-dark">
+		<!-- Main Header -->
+		<div class="sticky-header main-bar-wraper navbar-expand-lg">
+			<div class="main-bar clearfix ">
+				<div class="container-fluid">
+					<div class="header-content-bx">
+						<!-- website logo -->
+						<div class="logo-header">
+							<a href="/blog/"><img src="{% static "images/logo.png" %}" alt=""/></a>
+						</div>
+						<!-- Extra Nav -->
+						<div class="extra-nav">
+							<div class="extra-cell">
+								<ul>
+									<li class="search-btn">
+										<a href="javascript:;" class="btn-link menu-icon">
+											<div class="menu-icon-in">
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Main Nav -->
+						<div class="header-nav navbar-collapse collapse justify-content-center nav-dark" id="navbarNavDropdown">
+							<ul class="nav navbar-nav">	
+								<li class="active">
+									<a href="javascript:void(0);">Home </a>
+									<ul class="sub-menu">
+										<li><a href="/blog/">Home 01</a></li>
+										{% comment %} <li><a href="index-2.html">Home 02</a></li>
+										<li><a href="index-3.html">Home 03</a></li>
+										<li><a href="index-4.html">Home 04</a></li>
+										<li><a href="index-5.html">Home 05</a></li> {% endcomment %}
+									</ul>	
+								</li>
+								<li>
+									<a href="javascript:void(0);">Featured </a>
+									<ul class="sub-menu">
+										<li><a href="/blog/postlist/">Post List</a></li>
+										{% comment %} <li><a href="post-standart.html">Post Standart</a></li>
+										<li><a href="post-left-sidebar.html">Post Left Sidebar</a></li>
+										<li><a href="post-full-width.html">Post Full Width</a></li>
+										<li><a href="post-slide-show.html">Post Slide Show</a></li>
+										<li><a href="post-header-image.html">Post Header Image</a></li>
+										<li><a href="post-gallery.html">Post Gallery</a></li>
+										<li><a href="post-audio.html">Post Audio</a></li>
+										<li><a href="post-video.html">Post Video</a></li>
+										<li><a href="post-side-image.html">Post Side Image</a></li>
+										<li><a href="post-without-image.html">Post Without Image</a></li>
+										<li><a href="post-open-gutenberg.html">Post Open Gutenberg</a></li> {% endcomment %}
+									</ul>
+								</li>
+								<li>
+									<a href="javascript:void(0);">Pages </a>
+									<ul class="sub-menu">
+										<li><a href="about-us.html">About Us</a></li>
+										<li><a href="error-404.html">Error 404</a></li>
+										<li><a href="shop-product.html">Shop Product</a></li>
+										<li><a href="shopping-cart.html">Shopping Cart</a></li>
+										<li><a href="checkout.html">Checkout</a></li>
+										<li><a href="product-details.html">Product Details</a></li>
+									</ul>
+								</li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Main Header END -->
+		<!-- Header Left -->
+		<div class="header-nav navbar-collapse collapse full-sidenav content-scroll">
+			<div class="location">
+				<p><i class="fa fa-map-marker"></i>Miami, Florida, USA</p>
+			</div>
+			<ul class="nav navbar-nav">	
+				<li class="active">
+					<a href="javascript:void(0);">Home </a>
+					<ul class="sub-menu">
+						<li><a href="/blog/">Home 01</a></li>
+						{% comment %} <li><a href="index-2.html">Home 02</a></li>
+						<li><a href="index-3.html">Home 03</a></li>
+						<li><a href="index-4.html">Home 04</a></li>
+						<li><a href="index-5.html">Home 05</a></li> {% endcomment %}
+					</ul>	
+				</li>
+				<li>
+					<a href="javascript:void(0);">Featured </a>
+					<ul class="sub-menu">
+						<li><a href="postlist/">Post List</a></li>
+						{% comment %} <li><a href="post-standart.html">Post Standart</a></li>
+						<li><a href="post-left-sidebar.html">Post Left Sidebar</a></li>
+						<li><a href="post-full-width.html">Post Full Width</a></li>
+						<li><a href="post-slide-show.html">Post Slide Show</a></li>
+						<li><a href="post-header-image.html">Post Header Image</a></li>
+						<li><a href="post-gallery.html">Post Gallery</a></li>
+						<li><a href="post-audio.html">Post Audio</a></li>
+						<li><a href="post-video.html">Post Video</a></li>
+						<li><a href="post-side-image.html">Post Side Image</a></li>
+						<li><a href="post-without-image.html">Post Without Image</a></li>
+						<li><a href="post-open-gutenberg.html">Post Open Gutenberg</a></li> {% endcomment %}
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">Pages </a>
+					<ul class="sub-menu">
+						<li><a href="about-us.html">About Us</a></li>
+						<li><a href="error-404.html">Error 404</a></li>
+						<li><a href="shop-product.html">Shop Product</a></li>
+						<li><a href="shopping-cart.html">Shopping Cart</a></li>
+						<li><a href="checkout.html">Checkout</a></li>
+						<li><a href="product-details.html">Product Details</a></li>
+					</ul>
+				</li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="logo-header">
+				<a href="index.html"><img src="{% static "images/logo.png" %}" alt=""/></a>
+			</div>
+		</div>
+		<div class="menu-close">
+			<i class="la la-close"></i>
+		</div>
+		<!-- Header Left End -->
+	</header>
+	<!-- header END -->
+    <!-- Content -->
+    
+    {% block content %} {% endblock %}
+
+    <!-- Content END-->
+	<!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<ul class="footer-link m-b0">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about-us.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>						
+					</div>
+					<div class="col-lg-4">
+						<div class="footer-logo">
+							<a href="index.html"><img src="images/logo.png" alt=""/></a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<p class="copyright">Copyright © 2020 DexignZone.</p>
+					</div>
+				</div>
+			</div>
+        </div>
+    </footer>
+    <!-- Footer END-->
+    <button class="scroltop fa fa-chevron-up" ></button>
+</div>
+<!-- JAVASCRIPT FILES ========================================= -->
+<script src="{% static "js/jquery.min.js" %}"></script><!-- JQUERY.MIN JS -->
+<script src="{% static "plugins/bootstrap/js/popper.min.js" %}"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="{% static "plugins/bootstrap/js/bootstrap.min.js" %}"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="{% static "plugins/bootstrap-select/bootstrap-select.min.js" %}"></script><!-- FORM JS -->
+<script src="{% static "plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js" %}"></script><!-- FORM JS -->
+<script src="{% static "plugins/magnific-popup/magnific-popup.js" %}"></script><!-- MAGNIFIC POPUP JS -->
+<script src="{% static "plugins/counter/waypoints-min.js" %}"></script><!-- WAYPOINTS JS -->
+<script src="{% static "plugins/counter/counterup.min.js" %}"></script><!-- COUNTERUP JS -->
+<script src="{% static "plugins/imagesloaded/imagesloaded.js" %}"></script><!-- IMAGESLOADED -->
+<script src="{% static "plugins/masonry/masonry-3.1.4.js" %}"></script><!-- MASONRY -->
+<script src="{% static "plugins/masonry/masonry.filter.js" %}"></script><!-- MASONRY -->
+<script src="{% static "plugins/owl-carousel/owl.carousel.js" %}"></script><!-- OWL SLIDER -->
+<script src="{% static "plugins/scroll/scrollbar.min.js" %}"></script><!-- Scroll Bar -->
+<script src="{% static "js/custom.js" %}"></script><!-- CUSTOM FUCTIONS  -->
+<script src="{% static "js/dz.carousel.js" %}"></script><!-- SORTCODE FUCTIONS -->
+<script src="{% static "js/dz.ajax.js" %}"></script><!-- CONTACT JS  -->
+<script>
+$(document).ready(function() {
+
+  var sync1 = $("#sync1");
+  var sync2 = $("#sync2");
+  var slidesPerPage = 3; //globaly define number of elements per page
+  var syncedSecondary = true;
+
+	  sync1.owlCarousel({
+		items : 1,
+		slideSpeed : 2000,
+		nav: true,
+		autoplay: false,
+		dots: false,
+		loop: true,
+		responsiveRefreshRate : 200,
+		navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+	  }).on('changed.owl.carousel', syncPosition);
+
+	  sync2.on('initialized.owl.carousel', function () {
+		  sync2.find(".owl-item").eq(0).addClass("current");
+		}).owlCarousel({
+		items : slidesPerPage,
+		dots: false,
+		nav: false,
+		margin:5,
+		smartSpeed: 200,
+		slideSpeed : 500,
+		slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+		responsiveRefreshRate : 100
+	  }).on('changed.owl.carousel', syncPosition2);
+
+  function syncPosition(el) {
+    //if you set loop to false, you have to restore this next line
+    //var current = el.item.index;
+    
+    //if you disable loop you have to comment this block
+    var count = el.item.count-1;
+    var current = Math.round(el.item.index - (el.item.count/2) - .5);
+    
+    if(current < 0) {
+      current = count;
+    }
+    if(current > count) {
+      current = 0;
+    }
+    
+    //end block
+
+    sync2
+      .find(".owl-item")
+      .removeClass("current")
+      .eq(current)
+      .addClass("current");
+    var onscreen = sync2.find('.owl-item.active').length - 1;
+    var start = sync2.find('.owl-item.active').first().index();
+    var end = sync2.find('.owl-item.active').last().index();
+    
+    if (current > end) {
+      sync2.data('owl.carousel').to(current, 100, true);
+    }
+    if (current < start) {
+      sync2.data('owl.carousel').to(current - onscreen, 100, true);
+    }
+  }
+  
+  function syncPosition2(el) {
+	
+    if(syncedSecondary) {
+      var number = el.item.index;
+      sync1.data('owl.carousel').to(number, 100, true);
+    }
+  }
+  
+  sync2.on("click", ".owl-item", function(e){
+		e.preventDefault();
+		
+		var number = $(this).index();
+		//sync1.data('owl.carousel').to(number, 300, true);
+		
+		sync1.data('owl.carousel').to(number, 300, true);
+		
+	});
+});
+
+</script>
+</body>
+</html>

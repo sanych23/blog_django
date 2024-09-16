@@ -31,5 +31,6 @@ urlpatterns = [
     # path("error-404/", MainView.handler404),
     path("test-get/", MainView.test_get),
     path("blog/", include("blog.urls")),
+    path("magazine/", include("magazine.urls")),
     path("custom-error-404/", MySite.action404),
 ]

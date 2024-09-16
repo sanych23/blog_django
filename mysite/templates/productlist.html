@@ -1,0 +1,215 @@
+{% extends "magazine_layouts/magazine_layout.html" %}
+{% load static %}
+
+{% block content %}
+<div class="page-content bg-white">
+    <!-- inner page banner -->
+    <div class="dlab-bnr-inr dlab-bnr-inr-sm overlay-black-middle bg-pt" style="background-image:url({% static "images/banner/bnr1.jpg" %})">
+        <div class="container">
+            <div class="dlab-bnr-inr-entry">
+                <h1 class="text-white">{{ title }}</h1>
+            </div>
+        </div>
+    </div>
+    <!-- inner page banner END -->
+    <!-- Product Section -->
+    <div class="section-full content-inner-2">
+        <div class="container">
+            <div class="row filter">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="filter-show">Showing all {{ products.count }} results</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <select class="bs-select-hidden">
+                        <option>Sort by Popularity</option>
+                        <option>Best Sales</option>
+                        <option>Update Date</option>
+                        <option>Last Week</option>
+                        <option>Last Day</option>
+                    </select><div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Sort by Popularity"><span class="filter-option pull-left">Sort by Popularity</span>&nbsp;<span class="caret fa fa-caret-down"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Sort by Popularity</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Best Sales</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Update Date</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Last Week</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Last Day</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                </div>
+            </div>
+            <div class="row">
+                {% for product in products %}
+                <div class="col-xl-3 col-lg-4 col-sm-6 m-b30">
+                    <div class="item-box">
+                        <div class="item-img">
+                            <img src="{% static product.main_image_path %}" alt="">
+                            <div class="item-info-in">
+                                <a href="product-details.html">Add To Cart <i class="la la-cart-arrow-down"></i></a>
+                            </div>
+                            <ul class="item-review">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star-half-o"></i></li>
+                                <li><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <div class="item-info">
+                            <h6 class="item-tag">{{ product.category.title }}</h6>
+                            <h6 class="item-title font-weight-500"><a href="/magazine/product/{{ product.id }}">{{ product.title }}</a><span class="item-price">${{ product.price }}</span></h6>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="text-center">
+                <a href="javascript:void(0);" class="btn primary radius-no">Load More</a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Section End -->
+    <!-- Blog Card Carousel -->
+    <div class="blog-card-carousel owl-carousel mfp-gallery owl-none owl-loaded owl-drag">
+        
+        
+        
+        
+        
+        
+    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2246px, 0px, 0px); transition: 0.25s; width: 4045px;"><div class="owl-item cloned" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic1.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic1.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item cloned" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic2.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic2.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item cloned" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic3.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "}images/blog/card/pic3.jpg" %" alt="">
+            </a>
+        </div></div><div class="owl-item cloned" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic4.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic4.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item cloned" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic5.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic5.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item cloned" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic6.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic6.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic1.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic1.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic2.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic2.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic3.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic3.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic4.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic4.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item active" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic5.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic5.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item active" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic6.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic6.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item cloned active" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic1.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic1.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item cloned active" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic2.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic2.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item cloned active" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic3.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic3.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item cloned active" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic4.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic4.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item cloned" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic5.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic5.jpg" %}" alt="">
+            </a>
+        </div></div><div class="owl-item cloned" style="width: 224.667px;"><div class="item">
+            <a href="{% static "images/blog/card/pic6.jpg" %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here">
+                <img src="{% static "images/blog/card/pic6.jpg"" %} alt="">
+            </a>
+        </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots disabled"></div></div>
+    <!-- Blog Card Carousel End -->
+    <!-- Newslatter -->
+    <div class="newslatter-bx">
+        <div class="container">
+            <form action="{% static "script/mailchamp.php" %}" method="post" class="row m-lr0 align-items-center dezPlaceAni dzSubscribe">
+                <div class="col-xl-6 col-lg-6 col-md-12">
+                    <div class="title-bx">
+                        <h2 class="m-b0">Join Our Newslatter!</h2>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 contact-form-bx">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label>Your Email Address</label>
+                            <input name="dzEmail" required="required" type="email" class="form-control" placeholder="">
+                            <button name="submit" value="Submit" type="submit" class="btn-link">Subscribe</button>
+                        </div>
+                        <div class="dzSubscribeMsg"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Newslatter End -->
+    <!-- Social Link Box -->
+    <div class="section-full social-link-bx">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-twitter"></i>
+                        <span>twitter</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-behance"></i>
+                        <span>Behance</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-youtube-play"></i>
+                        <span>Youtube</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-pinterest-p"></i>
+                        <span>Pinterest</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Social Link Box End -->
+</div>
+					
+{% endblock %}					

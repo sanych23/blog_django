@@ -1,0 +1,329 @@
+{% extends "magazine_layouts/product_layout.html" %}
+{% load static %}
+
+{% block content %}
+<div class="page-content bg-white">
+    <!-- Product details -->
+    <div class="container content-inner-1 woo-entry">
+        <div class="row m-b30">
+            <div class="col-md-5 col-lg-6">
+                <div class="product-gallery on-show-slider owl-none"> 
+                    <div id="sync1" class="owl-carousel owl-theme owl-btn-center-lr owl-btn-1 primary">
+                        {% for img in product.Images.all %}
+                        <div class="item">
+                            <div class="mfp-gallery">
+                                <div class="dlab-box">
+                                    <div class="dlab-thum-bx dlab-img-overlay1 ">
+                                        <img src="{% static img.image_path %}" alt="">
+                                        <div class="overlay-bx">
+                                            <div class="overlay-icon">
+                                                <a class="mfp-link" href="{% static img.image_path %}" title="Title Come here">
+                                                    <i class="ti-fullscreen"></i>
+                                                </a>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div id="sync2" class="owl-carousel owl-theme owl-none">
+                        {% for img in product.Images.all %}
+                        <div class="item">
+                            <div class="dlab-media">
+                                <img src="{% static img.image_path %}" alt="">
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 col-lg-6">
+                <form method="post" class="cart sticky-top">
+                    <div class="dlab-post-title">
+                        <h6 class="m-tb10 category">{{ product.category.title }}
+                            <strong class="shop-item-rating">
+                                <span class="rating-bx"> 
+                                    <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star-o"></i> 
+                                    <i class="fa fa-star-o"></i> 
+                                </span>
+                            </strong>
+                        </h6>
+                        <h4 class="post-title"><a href="#">{{ product.title }}</a></h4>
+                        <h4 class="product-price">${{ product.price }}</h4>
+                        <p class="m-b10">{{ product.short_description }}</p>
+                        <div class="dlab-divider bg-gray tb15"><i class="icon-dot c-square"></i></div>
+                    </div>
+                    <div class="cart-info">
+                        <div class="info-bx">
+                            <div class="quantity btn-quantity style-2">
+                                <input id="demo_vertical2" type="text" value="01" name="demo_vertical2"/>
+                            </div>
+                        </div>
+                        <div class="info-bx">
+                            <button class="btn primary btn-block radius-no">Add to Cart</button>
+                        </div>
+                        <div class="info-bx">
+                            <ul class="shop-item-info">
+                                <li><a href="javascript:void(0);" class="la la-heart-o"></a></li>
+                                <li><a href="javascript:void(0);" class="la la-refresh"></a></li>
+                                <li><a href="javascript:void(0);" class="la la-share-alt-square"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shop-item-tage">
+                        <span>SKU: </span>
+                        <a href="javascript:void(0);">AC-1166541</a>
+                    </div>
+                    <div class="shop-item-tage">
+                        <span>Tags: </span>
+                        <a href="javascript:void(0);">Women, </a>
+                        <a href="javascript:void(0);">Dresses, </a>
+                        <a href="javascript:void(0);">New</a>
+                    </div>
+                    <div class="dlab-accordion product-description space" id="accordion1">
+                        <div class="panel">
+                            <div class="acod-head">
+                                <h5 class="acod-title"> 
+                                    <a data-toggle="collapse" href="#collapseOne1" data-parent="#accordion1"> Description</a> 
+                                </h5>
+                            </div>
+                            <div id="collapseOne1" class="acod-body collapse show" data-parent="#accordion1">
+                                <div class="acod-content">
+                                    <p class="m-b0">{{ product.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="acod-head">
+                                <h5 class="acod-title"> 
+                                    <a data-toggle="collapse" href="#collapseTwo1" class="collapsed" data-parent="#accordion1">Additional Information</a> 
+                                </h5>
+                            </div>
+                            <div id="collapseTwo1" class="acod-body collapse" data-parent="#accordion1">
+                                <div class="acod-content">
+                                    <p>Developement aorem apsum dolor sit amet, adipiscing elit, sed diam nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus. ipsum dolor sit amet, consectetuer adipiscing elit, sed diam 
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Claritas est etiam processus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="acod-head">
+                                <h5 class="acod-title"> 
+                                    <a data-toggle="collapse" href="#collapseThree1" class="collapsed" data-parent="#accordion1"> Reviews (3) </a> 
+                                </h5>
+                            </div>
+                            <div id="collapseThree1" class="acod-body collapse" data-parent="#accordion1">
+                                <div class="acod-content">
+                                    <p>Developement aorem apsum dolor sit amet, adipiscing elit, sed diam nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus. ipsum dolor sit amet, consectetuer adipiscing elit, sed diam 
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Claritas est etiam processus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>	
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Product Section -->
+    <div class="section-full content-inner">
+        <div class="container">
+            <h5 class="title-style1 text-uppercase">Top Products</h5>
+            <div class="product-slide owl-carousel owl-none m-b30">
+                <div class="item">
+                    <div class="item-box">
+                        <div class="item-img">
+                            <a href="product-details.html"><img src="{% static 'images/product/product-item/item1.jpg' %}" alt=""></a>
+                            <div class="item-info-in">
+                                <a href="product-details.html">Add To Cart <i class="la la-cart-arrow-down"></i></a>
+                            </div>
+                            <ul class="item-review">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star-half-o"></i></li>
+                                <li><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <div class="item-info">
+                            <h6 class="item-tag">Clothing</h6>
+                            <h6 class="item-title font-weight-500"><a href="product-details.html">Blouse Print</a><span class="item-price">$140</span></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-box">
+                        <div class="item-img">
+                            <a href="product-details.html"><img src="{% static 'images/product/product-item/item2.jpg' %}" alt=""></a>
+                            <div class="item-info-in">
+                                <a href="product-details.html">Add To Cart <i class="la la-cart-arrow-down"></i></a>
+                            </div>
+                            <ul class="item-review">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star-half-o"></i></li>
+                                <li><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <div class="item-info">
+                            <h6 class="item-tag">Clothing</h6>
+                            <h6 class="item-title font-weight-500"><a href="product-details.html">Denim Jacket</a><span class="item-price">$99</span></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-box">
+                        <div class="item-img">
+                            <a href="product-details.html"><img src="{% static 'images/product/product-item/item3.jpg' %}" alt=""></a>
+                            <div class="item-info-in">
+                                <a href="product-details.html">Add To Cart <i class="la la-cart-arrow-down"></i></a>
+                            </div>
+                            <ul class="item-review">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star-half-o"></i></li>
+                                <li><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <div class="item-info">
+                            <h6 class="item-tag">Clothing</h6>
+                            <h6 class="item-title font-weight-500"><a href="product-details.html">Leather Jacket</a><span class="item-price">$205</span></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-box">
+                        <div class="item-img">
+                            <a href="product-details.html"><img src="{% static 'images/product/product-item/item4.jpg' %}" alt=""></a>
+                            <div class="item-info-in">
+                                <a href="product-details.html">Add To Cart <i class="la la-cart-arrow-down"></i></a>
+                            </div>
+                            <ul class="item-review">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star-half-o"></i></li>
+                                <li><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <div class="item-info">
+                            <h6 class="item-tag">Clothing</h6>
+                            <h6 class="item-title font-weight-500"><a href="product-details.html">Men's Pullover</a><span class="item-price">$65</span></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Section End -->
+    <!-- Blog Card Carousel -->
+    <div class="blog-card-carousel owl-carousel owl-none">
+        <div class="item">
+            <!-- <a href="#" class="mfp-link dlab-img-effect fade-out" title="Title Come Here"> -->
+                <img src="{% static 'images/blog/card/pic1.jpg' %}" alt="">
+            <!-- </a> -->
+        </div>
+        <div class="item">
+            <!-- <a href="{% static 'images/blog/card/pic2.jpg' %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here"> -->
+                <img src="{% static 'images/blog/card/pic2.jpg' %}" alt="">
+            <!-- </a> -->
+        </div>
+        <div class="item">
+            <!-- <a href="{% static 'images/blog/card/pic3.jpg' %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here"> -->
+                <img src="{% static 'images/blog/card/pic3.jpg' %}" alt="">
+            <!-- </a> -->
+        </div>
+        <div class="item">
+            <!-- <a href="{% static 'images/blog/card/pic4.jpg' %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here"> -->
+                <img src="{% static 'images/blog/card/pic4.jpg' %}" alt="">
+            <!-- </a> -->
+        </div>
+        <div class="item">
+            <!-- <a href="{% static 'images/blog/card/pic5.jpg' %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here"> -->
+                <img src="{% static 'images/blog/card/pic5.jpg' %}" alt="">
+            <!-- </a> -->
+        </div>
+        <div class="item">
+            <!-- <a href="{% static 'images/blog/card/pic6.jpg' %}" class="mfp-link dlab-img-effect fade-out" title="Title Come Here"> -->
+                <img src="{% static 'images/blog/card/pic6.jpg' %}" alt="">
+            <!-- </a> -->
+        </div>
+    </div>
+    <!-- Blog Card Carousel End -->
+    <!-- Newslatter -->
+    <div class="newslatter-bx">
+        <div class="container">
+            <form action="{% static 'script/mailchamp.php' %}" method="post" class="row m-lr0 align-items-center dezPlaceAni dzSubscribe">
+                <div class="col-xl-6 col-lg-6 col-md-12">
+                    <div class="title-bx">
+                        <h2 class="m-b0">Join Our Newslatter!</h2>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 contact-form-bx">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label>Your Email Address</label>
+                            <input name="dzEmail" required="required" type="email" class="form-control" placeholder="" >
+                            <button name="submit" value="Submit" type="submit" class="btn-link">Subscribe</button>
+                        </div>
+                        <div class="dzSubscribeMsg"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Newslatter End -->
+    <!-- Social Link Box -->
+    <div class="section-full social-link-bx">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-twitter"></i>
+                        <span>twitter</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-behance"></i>
+                        <span>Behance</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-youtube-play"></i>
+                        <span>Youtube</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                    <a href="javascript:void(0);" class="social-link">
+                        <i class="fa fa-pinterest-p"></i>
+                        <span>Pinterest</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Social Link Box End -->
+</div>
+{% endblock %}
+
+

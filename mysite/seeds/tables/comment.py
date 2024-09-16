@@ -1,11 +1,11 @@
 from django_seed import Seed
-from blog.models import Comment, Author, Posts
+from blog.models import Comment, User, Posts
 import random
 from faker import Faker
 
 
 class CommentSeed:
-    value_count = 2000
+    value_count = 500
     model = Comment
 
 
@@ -18,7 +18,7 @@ class CommentSeed:
         fake = Faker()
         seeder = Seed.seeder()
 
-        author_id = Author.objects.values_list('id', flat=True)
+        author_id = User.objects.values_list('id', flat=True)
         post_id = Posts.objects.values_list("id", flat=True)
         
         for id in range(1, self.value_count + 1):

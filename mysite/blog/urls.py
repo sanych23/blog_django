@@ -7,5 +7,6 @@ from blog.views import Blog
 urlpatterns = [
     path("", Blog.home),
     path("postlist/", Blog.postList),
+    path("create-comment/", Blog.createComment),
     path("post/<int:id>/", Blog.post),
 ]

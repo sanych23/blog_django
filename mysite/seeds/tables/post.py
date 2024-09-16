@@ -1,5 +1,5 @@
 from django_seed import Seed
-from blog.models import Posts, CategoryPost, Author
+from blog.models import Posts, CategoryPost, User
 import random
 from faker import Faker
 
@@ -37,7 +37,7 @@ class PostSeed:
         seeder = Seed.seeder()
 
         categorie_id = CategoryPost.objects.values_list('id', flat=True)
-        author_id = Author.objects.values_list('id', flat=True)
+        author_id = User.objects.values_list('id', flat=True)
         
         for id in range(1, self.value_count + 1):
             seed = {

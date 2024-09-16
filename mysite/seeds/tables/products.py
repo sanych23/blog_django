@@ -1,38 +1,111 @@
-from django_seed import Seed
-from magazine.models import Products, ProductCategory
+from magazine.models import Products, ProductCategory, TagProduct
 import random
 from faker import Faker
 
 
 class ProductsSeed:
-    value_count = 2
+    value_count = 10
     model = Products
-    image_paths = [
-        "images/product/product-item/item1.jpg",
-        "images/product/product-item/item2.jpg",
-        "images/product/product-item/item3.jpg",
-        "images/product/product-item/item4.jpg",
-        "images/product/product-item/item5.jpg",
-        "images/product/product-item/item6.jpg",
-        "images/product/product-item/item7.jpg",
-        "images/product/product-item/item8.jpg",
-        "images/product/product-item/item9.jpg",
-        "images/product/product-item/item10.jpg",
-        "images/product/product-item/item11.jpg",
-        "images/product/product-item/item12.jpg",
+
+    categories = ProductCategory.objects.all()
+    
+    product_tags = {
+        'Чехол': [1],
+        'M5': [2, 3],
+        'Карданный вал': [3],
+        'W124': [2, 3],
+        'UAZ': [2, 3],
+        'Шруз автомобильный': [3],
+        'Шкаф': [4],
+        'Кресло': [4],
+        'Диван': [4],
+    }
+
+    real_data = [
+        {
+            "title": 'Чехол',
+            "short_description": "Чехол обычкновенный черный",
+            "description": "test",
+            "count": 0,
+            "price": random.uniform(0, 10000),
+            "old_price": random.uniform(0, 10000),
+        },
+        {
+            "title": 'M5',
+            "short_description": "Машина спортивная черная",
+            "description": "test",
+            "count": 0,
+            "price": random.uniform(0, 10000),
+            "old_price": random.uniform(0, 10000),
+        },
+        {
+            "title": 'Карданный вал',
+            "short_description": "Запчасть для автомобиля",
+            "description": "test",
+            "count": 0,
+            "price": random.uniform(0, 10000),
+            "old_price": random.uniform(0, 10000),
+        },
+        {
+            "title": 'W124',
+            "short_description": "Комфортный немецкий старый автомобиль",
+            "description": "test",
+            "count": 0,
+            "price": random.uniform(0, 10000),
+            "old_price": random.uniform(0, 10000),
+        },
+        {
+            "title": 'UAZ',
+            "short_description": "Надежная техничка для работы",
+            "description": "test",
+            "count": 0,
+            "price": random.uniform(0, 10000),
+            "old_price": random.uniform(0, 10000),
+        },
+        {
+            "title": 'Шруз автомобильный',
+            "short_description": "Запчасть для подвески автомобиля",
+            "description": "test",
+            "count": 0,
+            "price": random.uniform(0, 10000),
+            "old_price": random.uniform(0, 10000),
+        },
+        {
+            "title": 'Шкаф',
+            "short_description": "Просторный шкаф для хранения вещей",
+            "description": "test",
+            "count": 0,
+            "price": random.uniform(0, 10000),
+            "old_price": random.uniform(0, 10000),
+        },
+        {
+            "title": 'Кресло',
+            "short_description": "Удобное кресло",
+            "description": "test",
+            "count": 0,
+            "price": random.uniform(0, 10000),
+            "old_price": random.uniform(0, 10000),
+        },
+        {
+            "title": 'Диван',
+            "short_description": "Диван для гостей в голубом цвете",
+            "description": "test",
+            "count": 0,
+            "price": random.uniform(0, 10000),
+            "old_price": random.uniform(0, 10000),
+        }
     ]
 
 
     @staticmethod
     def order():
-        return 5
+        return 6
 
     def __init__(self) -> None:
 
         fake = Faker()
-        seeder = Seed.seeder()
 
-        categories = ProductCategory.objects.all()
+        product_tags = TagProduct.objects.all()
         
         for id in range(1, self.value_count + 1):
             seed = {
@@ -40,14 +113,22 @@ class ProductsSeed:
                 "title": fake.text(max_nb_chars=15),
                 "short_description": fake.text(max_nb_chars=100),
                 "description": fake.text(max_nb_chars=1000),
-                # "main_image_product": random.choice(self.image_paths),
                 "count": 0,
                 "price": random.uniform(0, 10000),
                 "old_price": random.uniform(0, 10000),
-                "category": random.choice(categories),
+                "category": random.choice(self.categories),
             }
-            seeder.add_entity(self.model, 1, seed)
-        seeder.execute()
+            obj = self.model(**seed)
+            obj.save()
+
+        for seed in self.real_data:
+            self.value_count += 1
+            seed['id'] = self.value_count
+            seed['category'] = random.choice(self.categories)
+            obj = self.model(**seed)
+            obj.save()
+            obj.tags.add(*self.product_tags[seed['title']])
+
 
     @staticmethod
     def delete():

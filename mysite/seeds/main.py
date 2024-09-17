@@ -25,15 +25,15 @@ class Main:
         for dir in self.dirs:
             seed_name = f"{dir.name[0:-3].capitalize()}Seed"
             module = getattr(importlib.import_module(f"seeds.tables.{dir.name[0:-3]}", package=seed_name), seed_name)
-            self.list_modules.append(module)
+            self.list_modules.append(module())
             
     def sort_modules(self):
-        self.list_modules.sort(key=lambda module: module.order())
+        self.list_modules.sort(key=lambda module: module.order)
     
     def start(self):
         self.delete()
         for module in self.list_modules:
-            module()
+            module.start()
             print(f"Seed {module} complete!")
 
     def delete(self):

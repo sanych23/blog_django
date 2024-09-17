@@ -4,6 +4,7 @@ from faker import Faker
 
 
 class TagsSeed:
+    order = 5
     model = TagProduct
     
     data = [
@@ -30,11 +31,7 @@ class TagsSeed:
     ]
 
 
-    @staticmethod
-    def order():
-        return 5
-
-    def __init__(self) -> None:
+    def start(self) -> None:
 
         fake = Faker()
         seeder = Seed.seeder()
@@ -43,7 +40,7 @@ class TagsSeed:
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
 
-    @staticmethod
-    def delete():
-        TagProduct.objects.all().delete()
+
+    def delete(self):
+        self.model.objects.all().delete()
         

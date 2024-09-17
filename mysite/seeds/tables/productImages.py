@@ -5,7 +5,7 @@ from faker import Faker
 
 
 class ProductimagesSeed:
-    # value_count = 
+    order = 7
     model = ProductImages
     
     image_paths = [
@@ -24,11 +24,7 @@ class ProductimagesSeed:
     ]
 
 
-    @staticmethod
-    def order():
-        return 7
-
-    def __init__(self) -> None:
+    def start(self) -> None:
 
         seeder = Seed.seeder()
         id = 0
@@ -44,6 +40,6 @@ class ProductimagesSeed:
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
 
-    @staticmethod
-    def delete():
-        ProductImages.objects.all().delete()
+
+    def delete(self):
+        self.model.objects.all().delete()

@@ -4,6 +4,7 @@ from faker import Faker
 
 
 class CategorySeed:
+    order = 2
     model = CategoryPost
     data = [
         {
@@ -28,17 +29,13 @@ class CategorySeed:
         },
     ]
 
-    @staticmethod
-    def order():
-        return 2
 
-    def __init__(self) -> None:
+    def start(self) -> None:
         seeder = Seed.seeder()
         for seed in self.data:
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
 
 
-    @staticmethod
-    def delete():
-        CategoryPost.objects.all().delete()
+    def delete(self):
+        self.model.objects.all().delete()

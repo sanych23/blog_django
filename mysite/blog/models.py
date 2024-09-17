@@ -4,9 +4,15 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     avatar = models.CharField(max_length=255, null=True)
+    role = models.ForeignKey("Role", on_delete=models.DO_NOTHING, null=True)
 
     class Meta:
         db_table = "auth_user"
+
+
+class Role(models.Model):
+    title = models.CharField(max_length=255)
+    hidden_role = models.BooleanField(default=False, null=True)
 
 
 class CategoryPost(models.Model):

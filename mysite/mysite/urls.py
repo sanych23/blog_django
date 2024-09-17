@@ -33,4 +33,5 @@ urlpatterns = [
     path("blog/", include("blog.urls")),
     path("magazine/", include("magazine.urls")),
     path("custom-error-404/", MySite.action404),
+    path('auth/', include('authorisation.urls')),
 ]

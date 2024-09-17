@@ -5,15 +5,12 @@ from faker import Faker
 
 
 class CommentSeed:
+    order = 4
     value_count = 500
     model = Comment
 
 
-    @staticmethod
-    def order():
-        return 4
-
-    def __init__(self) -> None:
+    def start(self) -> None:
 
         fake = Faker()
         seeder = Seed.seeder()
@@ -33,6 +30,5 @@ class CommentSeed:
         seeder.execute()
 
 
-    @staticmethod
-    def delete():
-        Comment.objects.all().delete()
+    def delete(self):
+        self.model.objects.all().delete()

@@ -5,6 +5,7 @@ from faker import Faker
 
 
 class UserSeed:
+    order = 1
     model = User
     
     data = [
@@ -13,40 +14,41 @@ class UserSeed:
             'username': 'Sasha',
             'email': 'sasha@ya.ru',
             'password': '123',
+            'role_id': 1,
         },
         {
             'id': 2,
             'username': 'Pasha',
             'email': 'pasha@ya.ru',
             'password': '123',
+            'role_id': 1,
         },
         {
             'id': 3,
             'username': 'Masha',
             'email': 'masha@ya.ru',
             'password': '123',
+            'role_id': 1,
         },
         {
             'id': 4,
             'username': 'Kasha',
             'email': 'kasha@ya.ru',
             'password': '123',
+            'role_id': 1,
         },
         {
             'id': 5,
             'username': 'sansanych',
             'email': 'sansanych@ya.ru',
             'password': '2001',
-            'is_staff': True
+            'is_staff': True,
+            'role_id': 1,
         }
     ]
 
 
-    @staticmethod
-    def order():
-        return 1
-
-    def __init__(self) -> None:
+    def start(self) -> None:
 
         fake = Faker()
         seeder = Seed.seeder()
@@ -55,6 +57,6 @@ class UserSeed:
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
 
-    @staticmethod
-    def delete():
-        User.objects.all().delete()
+
+    def delete(self):
+        self.model.objects.all().delete()

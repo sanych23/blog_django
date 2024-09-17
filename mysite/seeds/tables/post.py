@@ -5,6 +5,7 @@ from faker import Faker
 
 
 class PostSeed:
+    order = 3
     value_count = 100
     model = Posts
     image_paths = [
@@ -27,11 +28,7 @@ class PostSeed:
     ]
 
 
-    @staticmethod
-    def order():
-        return 3
-
-    def __init__(self) -> None:
+    def start(self) -> None:
 
         fake = Faker()
         seeder = Seed.seeder()
@@ -53,6 +50,6 @@ class PostSeed:
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
 
-    @staticmethod
-    def delete():
-        Posts.objects.all().delete()
+
+    def delete(self):
+        self.model.objects.all().delete()

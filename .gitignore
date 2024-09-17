@@ -1,4 +1,2 @@
 .venv
-mock
 *__pycache__
-config.py

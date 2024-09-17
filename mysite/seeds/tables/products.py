@@ -1,9 +1,10 @@
-from magazine.models import Products, ProductCategory, TagProduct
+from magazine.models import Products, ProductCategory
 import random
 from faker import Faker
 
 
 class ProductsSeed:
+    order = 6
     value_count = 10
     model = Products
 
@@ -97,15 +98,9 @@ class ProductsSeed:
     ]
 
 
-    @staticmethod
-    def order():
-        return 6
-
-    def __init__(self) -> None:
+    def start(self) -> None:
 
         fake = Faker()
-
-        product_tags = TagProduct.objects.all()
         
         for id in range(1, self.value_count + 1):
             seed = {
@@ -130,6 +125,5 @@ class ProductsSeed:
             obj.tags.add(*self.product_tags[seed['title']])
 
 
-    @staticmethod
-    def delete():
-        Products.objects.all().delete()
+    def delete(self):
+        self.model.objects.all().delete()

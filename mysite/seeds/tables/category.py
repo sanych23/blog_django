@@ -1,9 +1,10 @@
 from django_seed import Seed
 from blog.models import CategoryPost
 from faker import Faker
+from seeds.utils_seed import SeedExtension
 
 
-class CategorySeed:
+class CategorySeed(SeedExtension):
     order = 2
     model = CategoryPost
     data = [
@@ -35,7 +36,3 @@ class CategorySeed:
         for seed in self.data:
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
-
-
-    def delete(self):
-        self.model.objects.all().delete()

@@ -1,9 +1,10 @@
 from django_seed import Seed
 from magazine.models import TagProduct
 from faker import Faker
+from seeds.utils_seed import SeedExtension
 
 
-class TagsSeed:
+class TagsSeed(SeedExtension):
     order = 5
     model = TagProduct
     
@@ -40,7 +41,4 @@ class TagsSeed:
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
 
-
-    def delete(self):
-        self.model.objects.all().delete()
         

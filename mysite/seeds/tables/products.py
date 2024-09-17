@@ -1,9 +1,10 @@
 from magazine.models import Products, ProductCategory
 import random
 from faker import Faker
+from seeds.utils_seed import SeedExtension
 
 
-class ProductsSeed:
+class ProductsSeed(SeedExtension):
     order = 6
     value_count = 10
     model = Products
@@ -124,6 +125,3 @@ class ProductsSeed:
             obj.save()
             obj.tags.add(*self.product_tags[seed['title']])
 
-
-    def delete(self):
-        self.model.objects.all().delete()

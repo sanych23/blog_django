@@ -2,9 +2,9 @@ from django_seed import Seed
 from magazine.models import ProductImages, Products
 import random
 from faker import Faker
+from seeds.utils_seed import SeedExtension
 
-
-class ProductimagesSeed:
+class ProductimagesSeed(SeedExtension):
     order = 7
     model = ProductImages
     
@@ -40,6 +40,3 @@ class ProductimagesSeed:
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
 
-
-    def delete(self):
-        self.model.objects.all().delete()

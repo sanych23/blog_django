@@ -2,9 +2,10 @@ from django_seed import Seed
 from magazine.models import ProductCategory
 import random
 from faker import Faker
+from seeds.utils_seed import SeedExtension
 
 
-class ProductcategorySeed:
+class ProductcategorySeed(SeedExtension):
     order = 4
     model = ProductCategory
     
@@ -44,6 +45,3 @@ class ProductcategorySeed:
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
 
-
-    def delete(self):
-        self.model.objects.all().delete()

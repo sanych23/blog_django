@@ -2,9 +2,10 @@ from django_seed import Seed
 from blog.models import Comment, User, Posts
 import random
 from faker import Faker
+from seeds.utils_seed import SeedExtension
 
 
-class CommentSeed:
+class CommentSeed(SeedExtension):
     order = 4
     value_count = 500
     model = Comment
@@ -29,6 +30,3 @@ class CommentSeed:
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
 
-
-    def delete(self):
-        self.model.objects.all().delete()

@@ -132,7 +132,7 @@
     <!-- Product Section -->
     <div class="section-full content-inner">
         <div class="container">
-            <h5 class="title-style1 text-uppercase">Top Products</h5>
+            <h5 class="title-style1 text-uppercase">Similar Products</h5>
             <div class="product-slide owl-carousel owl-none m-b30">
                 {% for similar in product.similar_products %}
                 <div class="item">
@@ -153,6 +153,34 @@
                         <div class="item-info">
                             <h6 class="item-tag">Clothing</h6>
                             <h6 class="item-title font-weight-500"><a href="product-details.html">{{ similar.title }}</a><span class="item-price">${{ similar.price }}</span></h6>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="container">
+            <h5 class="title-style1 text-uppercase">Recomended Products</h5>
+            <div class="product-slide owl-carousel owl-none m-b30">
+                {% for rec_product in product.recomended_product %}
+                <div class="item">
+                    <div class="item-box">
+                        <div class="item-img">
+                            <a href="product-details.html"><img src="{% static rec_product.main_image_path %}" alt=""></a>
+                            <div class="item-info-in">
+                                <a href="product-details.html">Add To Cart <i class="la la-cart-arrow-down"></i></a>
+                            </div>
+                            <ul class="item-review">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star-half-o"></i></li>
+                                <li><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <div class="item-info">
+                            <h6 class="item-tag">Clothing</h6>
+                            <h6 class="item-title font-weight-500"><a href="product-details.html">{{ rec_product.title }}</a><span class="item-price">${{ rec_product.price }}</span></h6>
                         </div>
                     </div>
                 </div>

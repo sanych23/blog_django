@@ -7,7 +7,6 @@ class ProductCategory(models.Model):
     description = models.TextField()
 
 
-# Create your models here.
 class Products(models.Model):
     title = models.CharField(max_length=100)
     short_description = models.TextField()
@@ -34,7 +33,7 @@ class Products(models.Model):
         return actual_products
     
     def recomended_product(self):
-        return 
+        return
     
     def __str__(self) -> str:
         return f"{self.title}"
@@ -43,7 +42,6 @@ class Products(models.Model):
 class TagProduct(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-
 
     def __str__(self) -> str:
         return f"{self.title}"

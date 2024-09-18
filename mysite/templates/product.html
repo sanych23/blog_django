@@ -81,9 +81,9 @@
                     </div>
                     <div class="shop-item-tage">
                         <span>Tags: </span>
-                        <a href="javascript:void(0);">Women, </a>
-                        <a href="javascript:void(0);">Dresses, </a>
-                        <a href="javascript:void(0);">New</a>
+                            {% for tag in product.tags.all %}
+                                <a href="javascript:void(0);">{{ tag.title }}, </a>
+                            {% endfor %}
                     </div>
                     <div class="dlab-accordion product-description space" id="accordion1">
                         <div class="panel">
@@ -151,8 +151,13 @@
                             </ul>
                         </div>
                         <div class="item-info">
-                            <h6 class="item-tag">Clothing</h6>
-                            <h6 class="item-title font-weight-500"><a href="product-details.html">{{ similar.title }}</a><span class="item-price">${{ similar.price }}</span></h6>
+                            <div class="shop-item-tage">
+                                <span>Tags: </span>
+                                {% for tag in similar.tags.all %}
+                                    <a href="javascript:void(0);">{{ tag.title }}, </a>
+                                {% endfor %}
+                            </div>
+                            <h6 class="item-title font-weight-500"><a href="/magazine/product/{{ similar.id }}">{{ similar.title }}</a><span class="item-price">${{ similar.price }}</span></h6>
                         </div>
                     </div>
                 </div>
@@ -179,7 +184,12 @@
                             </ul>
                         </div>
                         <div class="item-info">
-                            <h6 class="item-tag">Clothing</h6>
+                            <div class="shop-item-tage">
+                                <span>Tags: </span>
+                                {% for tag in rec_product.tags.all %}
+                                    <a href="javascript:void(0);">{{ tag.title }}, </a>
+                                {% endfor %}
+                            </div>
                             <h6 class="item-title font-weight-500"><a href="product-details.html">{{ rec_product.title }}</a><span class="item-price">${{ rec_product.price }}</span></h6>
                         </div>
                     </div>

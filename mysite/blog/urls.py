@@ -9,4 +9,5 @@ urlpatterns = [
     path("postlist/", Blog.postList),
     path("create-comment/", Blog.createComment),
     path("post/<int:id>/", Blog.post),
+    path("newsletter/", Blog.newsletter, name='newsletter'),
 ]

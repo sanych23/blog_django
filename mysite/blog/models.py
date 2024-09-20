@@ -10,6 +10,10 @@ class User(AbstractUser):
         db_table = "auth_user"
 
 
+class NewsLetter(models.Model):
+    email = models.CharField(max_length=255)
+
+
 class Role(models.Model):
     title = models.CharField(max_length=255)
     hidden_role = models.BooleanField(default=False, null=True)

@@ -85,11 +85,11 @@
         </div>
         <div class="widget widget-newsletter">
             <div class="news-box text-center">
-                <form class="dzSubscribe" action="script/mailchamp.php" method="post">
+                <form class="dzSubscribe" action="{% url 'newsletter' %}" method="post">
                     <h6>Want More?</h6>
                     <p>Sed bibendum massa id luctus cras et lorem feugiat.</p>
                     <div class="input-group">
-                        <input name="dzEmail" required="required" type="email" class="form-control" placeholder="Your Email">
+                        <input required="required" type="email" class="form-control" placeholder="Your Email" name="email">
                         <div class="input-group-append">
                             <button name="submit" value="Submit" type="submit" class="btn">
                                 <i class="fa fa-paper-plane"></i>

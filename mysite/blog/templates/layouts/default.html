@@ -233,7 +233,7 @@
 		<!-- Newslatter -->
 		<div class="newslatter-bx">
 			<div class="container">
-				<form action="script/mailchamp.php" method="post" class="row m-lr0 align-items-center dezPlaceAni dzSubscribe">
+				<form action="{% url 'newsletter' %}" method="post" class="row m-lr0 align-items-center dezPlaceAni dzSubscribe">
 					<div class="col-xl-6 col-lg-6 col-md-12">
 						<div class="title-bx">
 							<h2 class="m-b0">Join Our Newslatter!</h2>
@@ -243,7 +243,7 @@
 						<div class="form-group">
 							<div class="input-group">
 								<label>Your Email Address</label>
-								<input name="dzEmail" required="required" type="email" class="form-control" placeholder="" >
+								<input name="dzEmail" required="required" type="email" class="form-control" placeholder="" name="email">
 								<button name="submit" value="Submit" type="submit" class="btn-link">Subscribe</button>
 							</div>
 							<div class="dzSubscribeMsg"></div>

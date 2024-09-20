@@ -55,6 +55,18 @@ class Blog:
 
     @csrf_exempt
     @api_view(["POST"])
+    def newsletter(request):
+        email = request.POST['email']
+
+        if len(NewsLetter.objects.filter(email=email)) > 0:
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        else:
+            NewsLetter.objects.create(email=email)
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    
+
+    @csrf_exempt
+    @api_view(["POST"])
     def createComment(request):
 
         post = Posts.objects.filter(id=request.POST["post_id"]).exists()

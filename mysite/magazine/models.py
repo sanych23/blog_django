@@ -1,5 +1,6 @@
 from django.db import models
-from services.magazine.selection_products import ProductsSelection
+# from difflib import SequenceMatcher
+from services.magazine.selection_products import ProductsSelection, RecomendedProduct
 
 
 class ProductCategory(models.Model):
@@ -33,7 +34,9 @@ class Products(models.Model):
         return actual_products
     
     def recomended_product(self):
-        return
+        all_products = Products.objects.all()
+        recomended_products = RecomendedProduct().get_recomdended_products(self, all_products)
+        return recomended_products
     
     def __str__(self) -> str:
         return f"{self.title}"

@@ -5,6 +5,7 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     avatar = models.CharField(max_length=255, null=True)
     role = models.ForeignKey("Role", on_delete=models.DO_NOTHING, null=True)
+    token = models.CharField(max_length=255)
 
     class Meta:
         db_table = "auth_user"

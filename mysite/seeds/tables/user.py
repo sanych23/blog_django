@@ -2,6 +2,7 @@ from django_seed import Seed
 from blog.models import User
 import random
 from faker import Faker
+from authorisation.services.token_generate import TokenGenerator
 from seeds.utils_seed import SeedExtension
 
 
@@ -23,6 +24,7 @@ class UserSeed(SeedExtension):
             'email': 'pasha@ya.ru',
             'password': '123',
             'role_id': 1,
+            
         },
         {
             'id': 3,
@@ -55,6 +57,7 @@ class UserSeed(SeedExtension):
         seeder = Seed.seeder()
         
         for seed in self.data:
+            seed['token'] = TokenGenerator.generate(seed['email'], seed['username'])
             seeder.add_entity(self.model, 1, seed)
         seeder.execute()
 

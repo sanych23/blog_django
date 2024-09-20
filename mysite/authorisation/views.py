@@ -4,6 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
 from blog.models import User
 import hashlib
+from .services.token_generate import TokenGenerator
 from django.http import HttpResponseRedirect
 import os
 
@@ -21,10 +22,6 @@ class Auth:
             bytes('секретик', 'utf-8'),
             100000
         )
-
-        # try:
-        #     user = User.objects.get(email=request.POST["email"])
-        # except:
 
         user = User.objects.filter(email=request.POST["email"], password=password).first()
         
@@ -56,8 +53,9 @@ class Auth:
                                             100000
                                         ),
                                         # request.POST["password"], 
-                                        role_id = request.POST["role_id"], 
-                                        ) 
+                                        role_id = request.POST["role_id"],
+                                        token = TokenGenerator.generate(request.POST["email"], request.POST["login"]),
+                                    ) 
         user.save() 
  
         return redirect(Auth.login)

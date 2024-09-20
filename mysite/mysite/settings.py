@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     "django_seed",
     "magazine",
     "authorisation",
-    # "django_recaptcha",
 ]
 
 MIDDLEWARE = [

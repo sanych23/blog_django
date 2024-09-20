@@ -6,7 +6,7 @@ from .views import Auth
 
 urlpatterns = [
     path("login/", Auth.login),
-    path("login-form/", Auth.loginform),
+    path("login-form/", Auth.loginform, name="login"),
     path("registration/", Auth.registration),
-    path("registration-form/", Auth.registrationform),
+    path("registration-form/", Auth.registrationform, name="register"),
 ]

@@ -21,16 +21,17 @@
                 <div class="col-lg-8">
                     <div class="checkout-bx">
                         <h5 class="title-style1 text-uppercase">Войти</h5>
-                        <form class="billing-detail">
+                        <form class="billing-detail" action="{% url 'login' %}" method="POST">
+                            {% csrf_token %}
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="form-group"> 
-                                        <input required="required" class="form-control" placeholder="First name">
+                                        <input required="required" class="form-control" placeholder="email" name="email">
                                     </div>
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="form-group"> 
-                                        <input required="required" class="form-control" placeholder="Last name">
+                                        <input type="password" required="required" class="form-control" placeholder="password" name="password">
                                     </div>
                                 </div>
                                 <div class="col-lg-8">

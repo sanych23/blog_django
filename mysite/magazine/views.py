@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Products
+from blog.models import User
+
 
 # Create your views here.
 class InternetMagazine:
@@ -12,7 +14,11 @@ class InternetMagazine:
         })
 
     def cart(request):
-        return render(request, "cart.html")
+        user = User.objects.filter(email=request.session.get("user")).first()
+
+        return render(request, "cart.html", context={
+            'user': user,
+        })
 
     def product(request, id):
         product = Products.objects.get(id=id)

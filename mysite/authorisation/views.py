@@ -24,11 +24,14 @@ class Auth:
         )
 
         user = User.objects.filter(email=request.POST["email"], password=password).first()
-        
+
         if not user:
             return redirect('/auth/login/')
         else:
-            request.session["user"] = user.email
+            token = TokenGenerator.generate(user.email, user.username)
+            user.token = token
+            user.save()
+            request.session["token"] = token
     
         return redirect('/magazine/cart/')
 

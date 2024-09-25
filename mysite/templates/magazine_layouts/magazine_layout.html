@@ -51,23 +51,7 @@
 						<div class="logo-header">
 							<a href="/blog/"><img src="{% static "images/logo.png" %}" alt=""/></a>
 						</div>
-						<!-- Extra Nav -->
-						<div class="extra-nav">
-							<div class="extra-cell">
-								<ul>
-									<li class="search-btn">
-										<a href="javascript:;" class="btn-link menu-icon">
-											<div class="menu-icon-in">
-												<span></span>
-												<span></span>
-												<span></span>
-												<span></span>
-											</div>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
+						
 						<!-- Main Nav -->
 						<div class="header-nav navbar-collapse collapse justify-content-center nav-dark" id="navbarNavDropdown">
 							<ul class="nav navbar-nav">	
@@ -118,13 +102,54 @@
 									</ul>
 								</li>
 							</ul>
+
 							<div class="login">
 								{% if user %}
-									<span style="margin-left: 50px;">Вы вошли как {{ user.username }}</span><a href="#" style="color: #fff;">Выйти</a>
+									<span style="margin-left: 50px;">Вы вошли как {{ user.username }} <a href="{% url "logout" %}" style="color: #fff; margin-left: 25px;">Выйти</a></span>
 								{% else %}
-									<a href="#" style="margin-left: 50px; color:#fff">Войти</a>
+									<a href="/auth/login" style="margin-left:50px; color: #fff;">Войти</a>
 								{% endif %}
 							</div>
+							<div class="cart_wrap">
+								<a href="/magazine/cart">
+									<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+								</a>
+								<span>
+									{% if cart|length > 0 %}
+										<div class="cart_count">
+											<span>
+												{{ cart|length }}
+											</span>
+											
+										</div>
+									{% else %}
+										<div class="cart_count">
+											<span>
+												0
+											</span>
+											
+										</div>
+									{% endif %}
+								</span>
+							</div>
+							<!-- Extra Nav -->
+							<div class="extra-nav">
+								<div class="extra-cell">
+									<ul>
+										<li class="search-btn">
+											<a href="javascript:;" class="btn-link menu-icon">
+												<div class="menu-icon-in">
+													<span></span>
+													<span></span>
+													<span></span>
+													<span></span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>

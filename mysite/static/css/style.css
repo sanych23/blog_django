@@ -13138,6 +13138,7 @@ ol.commentlist li .star-rating {
 }
 .header-content-bx{
 	position:relative;
+    display: flex;
 }
 .header-content-bx .header-nav{
 	position: unset;
@@ -13887,4 +13888,32 @@ pre {
 		margin-right:0;
 		width:100%;
 	}
+}
+.cart_wrap a i{
+    color: #fff;
+}
+.cart_wrap{
+    align-self: center;
+    margin-left: 40px;
+    display: flex;
+}
+.login span{
+    color: #fff;
+    margin-right: 5px;
+}
+.login{
+    align-self: center;
+}
+.cart_count{
+    color: #000;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin-left: 10px;
 }

@@ -9,4 +9,5 @@ urlpatterns = [
     path("login-form/", Auth.loginform, name="login"),
     path("registration/", Auth.registration),
     path("registration-form/", Auth.registrationform, name="register"),
+    path("logout/", Auth.logout, name='logout'),
 ]

@@ -5,12 +5,19 @@ from rest_framework.decorators import api_view
 from blog.models import User
 import hashlib
 from django.http import HttpResponseRedirect
+from .widget import Widget
 import os
 
 # Create your views here.
 class Auth:
     def login(request):
-        return render(request, 'login.html')
+        user = Widget.login_widget(request)
+        cart = Widget.cart_widget(request)
+
+        return render(request, 'login.html', context={
+            'user': user,
+            'cart': cart,
+        })
 
     @csrf_exempt
     @api_view(["POST"])
@@ -41,6 +48,10 @@ class Auth:
         return render(request, 'register.html', context={
             'roles': roles
         })
+    
+    def logout(request): 
+        del request.session['user'] 
+        return redirect(request.META.get('HTTP_REFERER'))
     
     @csrf_exempt 
     @api_view(["POST"]) 

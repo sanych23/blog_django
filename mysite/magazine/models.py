@@ -1,6 +1,7 @@
 from django.db import models
 # from difflib import SequenceMatcher
 from services.magazine.selection_products import ProductsSelection, RecomendedProduct
+from blog.models import User
 
 
 class ProductCategory(models.Model):
@@ -61,4 +62,5 @@ class ProductImages(models.Model):
 
 
 class Cart(models.Model):
-    pass
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    product = models.ForeignKey("Products", on_delete=models.DO_NOTHING)

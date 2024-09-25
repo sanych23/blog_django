@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="col-md-7 col-lg-6">
-                <form method="post" class="cart sticky-top">
+                <form class="cart sticky-top" action="/magazine/update-cart/{{ product.id }}" method="GET">
                     <div class="dlab-post-title">
                         <h6 class="m-tb10 category">{{ product.category.title }}
                             <strong class="shop-item-rating">
@@ -140,7 +140,7 @@
                         <div class="item-img">
                             <a href="product-details.html"><img src="{% static similar.main_image_path %}" alt=""></a>
                             <div class="item-info-in">
-                                <a href="product-details.html">Add To Cart <i class="la la-cart-arrow-down"></i></a>
+                                <a href="/magazine/update-cart/{{ similar.id }}">Add To Cart <i class="la la-cart-arrow-down"></i></a>
                             </div>
                             <ul class="item-review">
                                 <li><i class="fa fa-star"></i></li>
@@ -173,7 +173,7 @@
                         <div class="item-img">
                             <a href="product-details.html"><img src="{% static rec_product.main_image_path %}" alt=""></a>
                             <div class="item-info-in">
-                                <a href="product-details.html">Add To Cart <i class="la la-cart-arrow-down"></i></a>
+                                <a href="/magazine/update-cart/{{ rec_product.id }}">Add To Cart <i class="la la-cart-arrow-down"></i></a>
                             </div>
                             <ul class="item-review">
                                 <li><i class="fa fa-star"></i></li>

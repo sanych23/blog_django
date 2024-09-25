@@ -5,6 +5,7 @@ from rest_framework.decorators import api_view
 from blog.models import User
 import hashlib
 from django.http import HttpResponseRedirect
+from magazine.models import Cart
 from .widget import Widget
 import os
 
@@ -38,7 +39,16 @@ class Auth:
         if not user:
             return redirect('/auth/login/')
         else:
-            request.session["user"] = user.email
+            product_cart = Widget.cart_widget(request)
+            for product in product_cart:
+                Cart.objects.create(product_id=product.id, user_id=user.id).save()
+                # Products.objects.create(product).save()
+            # del request.COOKIES['products'] 
+            response = HttpResponseRedirect("/magazine/cart/")
+            response.delete_cookie('products')
+            request.session["user"]=user.email
+            return response
+            # request.session["user"] = user.email
     
         return redirect('/magazine/cart/')
 

@@ -20,9 +20,14 @@ class Widget:
 
         if user:
             products = Products.objects.filter(id__in=Cart.objects.filter(user_id=user.id).values_list('product_id', flat=True))
-            print(products)
-
             return products
         else:
-            return []
+            id_products = request.COOKIES.get('products')
+            if id_products is None:
+                return []
+            id_products = id_products.split(',')[0:-1]
+            # print(id_products)
+
+            products = Products.objects.filter(id__in=id_products)
+            return products
 

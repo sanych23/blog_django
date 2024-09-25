@@ -16,6 +16,7 @@ class InternetMagazine:
             "title": "Shop",
             "products": products,
             'cart': cart,
+            'user': user,
         })
 
     def cart(request):
@@ -39,4 +40,6 @@ class InternetMagazine:
 
         return render(request, "product.html", context={
             "product": product,
+            "cart": cart,
+            "user": user,
         })

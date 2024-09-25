@@ -110,26 +110,42 @@
 									</ul>
 								</li>
 								<li><a href="contact.html">Contact</a></li>
+								{% if not user %}
 								<li>
 									<a href="javascript:void(0);">Auth</a>
 									<ul class="sub-menu">
-										<li><a href="/auth/login/">Authorization</a></li>
-										<li><a href="/auth/registration/">Registration</a></li>
+										<li><a href="/auth/login">Authorization</a></li>
+										<li><a href="/auth/registration">Registration</a></li>
 									</ul>
 								</li>
+								{% endif %}
 							</ul>
 							
 							<div class="login">
 								{% if user %}
-									<span style="margin-left: 50px;">Вы вошли как {{ user.username }}<a href="#" style="color-scheme: #fff;">Выйти</a></span>
-								{% else %}
-									<a href="/auth/login" style="margin-left:50px; color: #fff;">Войти</a>
+									<span style="margin-left: 50px;">Вы вошли как {{ user.username }} <a href="{% url "logout" %}" style="color: #fff; margin-left: 25px;">Выйти</a></span>
 								{% endif %}
+									<!-- <a href="/auth/login" style="margin-left:50px; color: #fff;">Войти</a> -->
 							</div>
 							<div class="cart_wrap">
-								<a href="#">
+								<a href="/magazine/cart">
 									<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
 								</a>
+								<span>
+									{% if cart|length > 0 %}
+										<div class="cart_count">
+											<span>
+												{{ cart|length }}
+											</span>
+										</div>
+									{% else %}
+										<div class="cart_count">
+											<span>
+												0
+											</span>
+										</div>
+									{% endif %}
+								</span>
 							</div>
 
 						</div>

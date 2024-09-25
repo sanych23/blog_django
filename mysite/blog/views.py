@@ -8,6 +8,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from blog.Data import *
 from blog.models import *
 from mysite.views import MySite
+from authorisation.widget import Widget
 
 
 class Blog:
@@ -17,16 +18,27 @@ class Blog:
 
 
     def postList(request):
+        user = Widget.login_widget(request)
+        cart = Widget.cart_widget(request)
+
         data = {
             "posts": Posts.objects.all(),
             "category": CategoryPost.objects.all(),
+            "user": user,
+            "cart": cart,
         }
 
         return render(request, "postlist.html", data)
 
 
     def post(request, id):
-        data = {}
+        user = Widget.login_widget(request)
+        cart = Widget.cart_widget(request)
+        
+        data = {
+            "user": user,
+            "cart": cart
+        }
 
         try:
             post = Posts.objects.get(id=id)

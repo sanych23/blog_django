@@ -29,31 +29,15 @@ class InternetMagazine:
         user = Widget.login_widget(request)
         cart = Widget.cart_widget(request)
 
-        # user = User.objects.filter(email=request.session.get("user")).first()
-
         return render(request, "cart.html", context={
             'user': user,
             'cart': cart,
         })
     
-    # @csrf_exempt
-    # @api_view(["POST"])
     def update_cart(request, id):
         user = Widget.login_widget(request)
 
         if user:
-            # cart_obj = Cart.objects.update_or_create(product_id=id, user_id=user.id)
-            # if cart_obj:
-            #     print('exist')
-            # else:
-            #     print("not exists")
-
-            # Cart.objects.update_or_create(product_id=id, user_id=user.id, defaults={
-            #     "count": Cart.objects.get(product_id=id, user_id=user.id).count + 1
-            # }, create_defaults={
-            #     "product_id": id,
-            #     "user_id": user.id,
-            # })
 
             try:
                 cart_obj = Cart.objects.get(product_id=id, user_id=user.id)
@@ -72,11 +56,9 @@ class InternetMagazine:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     
     def delete_from_cart(request, id):
-        # print("delete")
         user = Widget.login_widget(request)
 
         if user:
-            # Cart.objects.delete(product_id=id, user_id=user.id)
             Cart.objects.filter(product_id=id, user_id=user.id).delete()
         else:
             response = HttpResponseRedirect(request.META.get('HTTP_REFERER'))
@@ -128,7 +110,6 @@ class InternetMagazine:
 
         product = Products.objects.get(id=id)
 
-        # print(request.COOKIES.get("products"))
         return render(request, "product.html", context={
             "product": product,
             "cart": cart,

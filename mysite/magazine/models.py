@@ -64,3 +64,5 @@ class ProductImages(models.Model):
 class Cart(models.Model):
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     product = models.ForeignKey("Products", on_delete=models.DO_NOTHING)
+    count = models.IntegerField(default=1)
+

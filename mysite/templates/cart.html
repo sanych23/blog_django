@@ -31,7 +31,7 @@
                                         <input type="text" value="01"/>
                                     </li>
                                     <li class="product-price">${{product.price}}</li>
-                                    <li class="product-close"><a href="/magazine/delete-cart/{{ product.id }}" class="la la-close"></a></li>
+                                    <li class="product-close"><a href="#" class="la la-close js_delete_product" data-id="{{ product.id }}"></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                                 <button class="btn outline radius-no outline-1">Apply coupon</button>
                             </div>
                             <div class="form-group col-xl-3 offset-xl-3 col-lg-6 col-md-4 col-sm-6">
-                                <button class="btn outline radius-no float-right outline-1">Update Cart</button>
+                                <button class="btn outline radius-no float-right outline-1 update-cart">Update Cart</button>
                             </div>
                         </div>
                     </form>
@@ -72,8 +72,8 @@
                             <form>
                                 <div class="form-group">
                                     <ul class="checkout-list">
-                                        <li>Subtotal<span>$234</span></li>
-                                        <li>Shipping<span>$0</span></li>
+                                        <li class="sub-total">Subtotal<span>$234</span></li>
+                                        <li class="shipping">Shipping<span>$<span class="discount">0.00</span></li>
                                     </ul>
                                     <h2 class="price-title">Total<span class="price">$234</span></h2>
                                     <button class="btn btn-block m-t30 radius-no">PROCEED TO CHECKOUT</button>
@@ -281,6 +281,115 @@
     </div>
     <!-- Social Link Box End -->
 </div>
+
+<template id="product_cart">
+    <div class="product-item clearfix">
+        <div class="product-img">
+            <img src="" alt="">
+        </div>
+        <div class="product-info">
+            <ul>
+                <li class="product-title"><a href="product-details.html"></a></li>
+                <li class="product-item-quantity">
+                    <input type="text" value="01"/>
+                </li>
+                <li class="product-price"></li>
+                <li class="product-close"><a href="" class="la la-close js_delete_product" data-id=""></a></li>
+            </ul>
+        </div>
+    </div>
+</template>
+
+
+<script>
+    let priceWindow = document.querySelector(".order-checkout-bx");
+
+    function renderCart(){
+        request("POST", "/magazine/products-cart/", function(){
+            let cart = document.querySelector(".product-bx");
+            cart.innerHTML = "";
+            let template = document.querySelector("#product_cart");
+
+            // console.log(this.response);
+            let allPrices = [];
+
+            JSON.parse(this.response).forEach(product => {
+                let structure = template.content.cloneNode(true);
+
+                let price = product.price * product.count;
+
+                structure.querySelector(".product-title a").textContent = product.title;
+                structure.querySelector(".product-price").textContent = price.toFixed(2);
+                structure.querySelector(".js_delete_product").setAttribute("data-id", product.id);
+                structure.querySelector(".product-img img").setAttribute("src", `/static/${product.main_image_path}`);  
+                structure.querySelector(".product-item-quantity input").value = product.count;
+                // structure.querySelector(".product-close a").setAttribute("href", `/magazine/delete-product/`);         
+
+                cart.append(structure);
+                allPrices.push(price);
+            });
+
+            let fullPrice = allPrices.reduce((a, b) => a + b, 0).toFixed(2);
+            priceWindow.querySelector(".sub-total span").textContent = `$${fullPrice}`;
+
+            let total = fullPrice - priceWindow.querySelector(".discount").textContent;
+            priceWindow.querySelector(".price").textContent = `$${total.toFixed(2)}`;
+            
+            let products = document.querySelectorAll(".js_delete_product");
+    
+            for(let product of products){
+                product.addEventListener("click", function(e){
+                    e.preventDefault();
+                    request("POST", "/magazine/delete-product/", function (){
+                        renderCart();
+                    }, e.target.getAttribute("data-id"));
+                    renderCart();
+                })
+            }
+        });
+    }
+    renderCart();
+
+    function request(method, url, callback, id=null, json=null){
+        let request = new XMLHttpRequest();
+
+        request.open(method, url);
+
+        request.setRequestHeader("Content-Type", "application/json; charset=utf-8;");
+
+        if(id){
+            request.send(JSON.stringify({
+                id: id
+            }));
+        }
+        else if(json){
+            request.send(JSON.stringify(json));
+        }
+        else{
+            request.send();
+        }
+
+        request.onload = function() {
+            callback.bind(request)();
+        }
+    }
+    
+    document.querySelector(".update-cart").addEventListener("click", function(e){
+        e.preventDefault();
+        let products = [];
+        document.querySelectorAll(".product-item").forEach(product => {
+            let productInfo = {
+                id: product.querySelector(".js_delete_product").getAttribute("data-id"),
+                count: product.querySelector(".product-item-quantity input").value
+            }
+            products.push(productInfo);
+        });
+        request("POST", "/magazine/change-cart/", function(){
+            renderCart();
+        },null, products)
+    })
+
+</script>
 
 {% endblock %}
 
